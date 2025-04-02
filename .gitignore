@@ -111,4 +111,7 @@ Thumbs.db
 transcript_*.txt
 *.mp3
 *.wav
-*.flac 
+*.flac
+
+# IMPORTANT: Models are now tracked in git for development testing
+# *.pkl 

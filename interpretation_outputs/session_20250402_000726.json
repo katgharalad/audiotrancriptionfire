@@ -1,0 +1,26 @@
+[
+  {
+    "incident_type": "wildfire",
+    "address": "unknown address",
+    "casualties": "none",
+    "incident_type_confidence": 0.18,
+    "casualties_confidence": 0.91,
+    "confidence": 0.55,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.5,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-02T00:07:26.957654",
+    "transcript": "Speaker 2: No, I live alone. But please hurry, my dog is trapped in the bedroom."
+  }
+]

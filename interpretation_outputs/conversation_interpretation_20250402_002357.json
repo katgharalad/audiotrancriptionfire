@@ -1,0 +1,66 @@
+{
+  "interpretation": {
+    "incident_type": "wildfire",
+    "address": "unknown address",
+    "casualties": "unknown number trapped",
+    "incident_type_confidence": 0.85,
+    "casualties_confidence": 0.8,
+    "confidence": 0.82,
+    "address_validation": {
+      "normalized_address": "unknown address",
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": "priority",
+    "priority_level": "priority_level",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true,
+      "text": "unknown number trapped"
+    },
+    "needs_verification": false,
+    "timestamp": "2025-04-02T00:23:57.393020",
+    "transcript": "Speaker Unknown [00:23:43]: Ready? Alright, let's... Speaker Unknown [00:23:46]: Alright, let's do whenever you already just starts. Start. I'm on one more. What's your emergency? I am standing at "
+  },
+  "routing": {
+    "status": "processed",
+    "handler": "wildfire",
+    "timestamp": "2025-04-02T00:23:57.520291",
+    "message": "Dispatching wildland fire units and requesting mutual aid",
+    "resources": [
+      "brush_units",
+      "water_tenders",
+      "air_support",
+      "mutual_aid"
+    ],
+    "interpretation": {
+      "incident_type": "wildfire",
+      "address": "unknown address",
+      "casualties": "unknown number trapped",
+      "incident_type_confidence": 0.85,
+      "casualties_confidence": 0.8,
+      "confidence": 0.82,
+      "address_validation": {
+        "normalized_address": "unknown address",
+        "valid": false,
+        "confidence": 0.0,
+        "needs_verification": true
+      },
+      "priority": 5,
+      "priority_level": "CRITICAL",
+      "casualties_structured": {
+        "children": false,
+        "elderly": false,
+        "pets": false,
+        "caller": true,
+        "text": "unknown number trapped"
+      },
+      "needs_verification": false,
+      "timestamp": "2025-04-02T00:23:57.393020",
+      "transcript": "Speaker Unknown [00:23:43]: Ready? Alright, let's... Speaker Unknown [00:23:46]: Alright, let's do whenever you already just starts. Start. I'm on one more. What's your emergency? I am standing at "
+    }
+  }
+}

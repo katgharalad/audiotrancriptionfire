@@ -1,0 +1,65 @@
+{
+  "interpretation": {
+    "incident_type": "gas leak",
+    "address": "60 64 west winter street.",
+    "casualties": "adults trapped",
+    "incident_type_confidence": 0.85,
+    "casualties_confidence": 0.8,
+    "confidence": 0.82,
+    "address_validation": {
+      "normalized_address": "60 64 west winter street.",
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": "priority",
+    "priority_level": "priority_level",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false,
+      "text": "adults trapped"
+    },
+    "needs_verification": false,
+    "timestamp": "2025-04-02T00:39:15.697069",
+    "transcript": "911 Watch Your Emergency I'm at 60 64 West Winter Street, there's a fire from a gas leak and it's spreading fast. Are there any casualties? Yes, two casualties and three people trapped inside. inside. Are there any children? children just adults we are sending sending a unit right away. Thank you. "
+  },
+  "routing": {
+    "status": "processed",
+    "handler": "gas_leak",
+    "timestamp": "2025-04-02T00:39:15.815558",
+    "message": "Dispatching hazmat and fire units to gas leak",
+    "resources": [
+      "fire_engine",
+      "hazmat_unit",
+      "utility_company"
+    ],
+    "interpretation": {
+      "incident_type": "gas leak",
+      "address": "60 64 west winter street.",
+      "casualties": "adults trapped",
+      "incident_type_confidence": 0.85,
+      "casualties_confidence": 0.8,
+      "confidence": 0.82,
+      "address_validation": {
+        "normalized_address": "60 64 west winter street.",
+        "valid": false,
+        "confidence": 0.0,
+        "needs_verification": true
+      },
+      "priority": 4,
+      "priority_level": "URGENT",
+      "casualties_structured": {
+        "children": false,
+        "elderly": false,
+        "pets": false,
+        "caller": false,
+        "text": "adults trapped"
+      },
+      "needs_verification": false,
+      "timestamp": "2025-04-02T00:39:15.697069",
+      "transcript": "911 Watch Your Emergency I'm at 60 64 West Winter Street, there's a fire from a gas leak and it's spreading fast. Are there any casualties? Yes, two casualties and three people trapped inside. inside. Are there any children? children just adults we are sending sending a unit right away. Thank you. "
+    }
+  }
+}

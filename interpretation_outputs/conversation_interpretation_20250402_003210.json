@@ -1,0 +1,65 @@
+{
+  "interpretation": {
+    "incident_type": "gas leak",
+    "address": "64 west winter street. childr",
+    "casualties": "children trapped",
+    "incident_type_confidence": 0.85,
+    "casualties_confidence": 0.8,
+    "confidence": 0.82,
+    "address_validation": {
+      "normalized_address": "64 west winter street. childr",
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": "priority",
+    "priority_level": "priority_level",
+    "casualties_structured": {
+      "children": true,
+      "elderly": false,
+      "pets": false,
+      "caller": false,
+      "text": "children trapped"
+    },
+    "needs_verification": false,
+    "timestamp": "2025-04-02T00:32:10.509478",
+    "transcript": "00:31:23:  9-1-1 watch out at emergency ------------------------------------------------------------ 00:31:27:  I'm at 64 West Winter Street, there's a fire from a gas leak and it's pretty quick. ------------------------------------------------------------ 00:31:32:  And they're in children involved..."
+  },
+  "routing": {
+    "status": "processed",
+    "handler": "gas_leak",
+    "timestamp": "2025-04-02T00:32:10.624890",
+    "message": "Dispatching hazmat and fire units to gas leak",
+    "resources": [
+      "fire_engine",
+      "hazmat_unit",
+      "utility_company"
+    ],
+    "interpretation": {
+      "incident_type": "gas leak",
+      "address": "64 west winter street. childr",
+      "casualties": "children trapped",
+      "incident_type_confidence": 0.85,
+      "casualties_confidence": 0.8,
+      "confidence": 0.82,
+      "address_validation": {
+        "normalized_address": "64 west winter street. childr",
+        "valid": false,
+        "confidence": 0.0,
+        "needs_verification": true
+      },
+      "priority": 5,
+      "priority_level": "CRITICAL",
+      "casualties_structured": {
+        "children": true,
+        "elderly": false,
+        "pets": false,
+        "caller": false,
+        "text": "children trapped"
+      },
+      "needs_verification": false,
+      "timestamp": "2025-04-02T00:32:10.509478",
+      "transcript": "00:31:23:  9-1-1 watch out at emergency ------------------------------------------------------------ 00:31:27:  I'm at 64 West Winter Street, there's a fire from a gas leak and it's pretty quick. ------------------------------------------------------------ 00:31:32:  And they're in children involved..."
+    }
+  }
+}

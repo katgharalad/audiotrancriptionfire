@@ -1,0 +1,26 @@
+[
+  {
+    "incident_type": "kitchen fire",
+    "address": "123 oak street",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 1.0,
+    "casualties_confidence": 0.23,
+    "confidence": 0.61,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 3.8,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-02T00:07:25.504021",
+    "transcript": "Speaker 2: There's a kitchen fire at 123 Oak Street! The stove caught fire and it's spreading quickly."
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "interpretation": {
+    "incident_type": "gas leak",
+    "address": "unknown address",
+    "casualties": "children trapped",
+    "incident_type_confidence": 0.85,
+    "casualties_confidence": 0.8,
+    "confidence": 0.82,
+    "address_validation": {
+      "normalized_address": "unknown address",
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": "priority",
+    "priority_level": "priority_level",
+    "casualties_structured": {
+      "children": true,
+      "elderly": false,
+      "pets": false,
+      "caller": false,
+      "text": "children trapped"
+    },
+    "needs_verification": false,
+    "timestamp": "2025-04-02T00:36:23.692579",
+    "transcript": "911, what's your emergency? For West Winter Street, there's a gas leak and the fire spreading fast. Are there any casualties? Yes, two casualties, three people still trapped in. still trapped inside. Are there any children? No children, just that else. What's starting the fire? a gas leak from the stove. Is it spreading? Yes, it's spreading really fast Really fast. Okay, we will dispatch a unit right. it's going to dry the way. Thank you, please hurry. "
+  },
+  "routing": {
+    "status": "processed",
+    "handler": "gas_leak",
+    "timestamp": "2025-04-02T00:36:23.812592",
+    "message": "Dispatching hazmat and fire units to gas leak",
+    "resources": [
+      "fire_engine",
+      "hazmat_unit",
+      "utility_company"
+    ],
+    "interpretation": {
+      "incident_type": "gas leak",
+      "address": "unknown address",
+      "casualties": "children trapped",
+      "incident_type_confidence": 0.85,
+      "casualties_confidence": 0.8,
+      "confidence": 0.82,
+      "address_validation": {
+        "normalized_address": "unknown address",
+        "valid": false,
+        "confidence": 0.0,
+        "needs_verification": true
+      },
+      "priority": 5,
+      "priority_level": "CRITICAL",
+      "casualties_structured": {
+        "children": true,
+        "elderly": false,
+        "pets": false,
+        "caller": false,
+        "text": "children trapped"
+      },
+      "needs_verification": false,
+      "timestamp": "2025-04-02T00:36:23.692579",
+      "transcript": "911, what's your emergency? For West Winter Street, there's a gas leak and the fire spreading fast. Are there any casualties? Yes, two casualties, three people still trapped in. still trapped inside. Are there any children? No children, just that else. What's starting the fire? a gas leak from the stove. Is it spreading? Yes, it's spreading really fast Really fast. Okay, we will dispatch a unit right. it's going to dry the way. Thank you, please hurry. "
+    }
+  }
+}

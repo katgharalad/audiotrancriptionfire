@@ -1,0 +1,26 @@
+[
+  {
+    "incident_type": "gas leak",
+    "address": "60 64 west winter street.",
+    "casualties": "children trapped",
+    "incident_type_confidence": 0.99,
+    "casualties_confidence": 0.61,
+    "confidence": 0.8,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 5.0,
+    "priority_level": "MEDIUM",
+    "casualties_structured": {
+      "children": true,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-02T00:39:15.697069",
+    "transcript": "Speaker 2: There's a gas leak at 60 64 West Winter Street. adults trapped (no children)."
+  }
+]

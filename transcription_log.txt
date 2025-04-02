@@ -1,0 +1,19 @@
+TRANSCRIPTION LOG - 2023-04-01
+
+[12:35:45] Started transcription session
+[12:36:12] Transcript saved: transcript_20230401_123612.txt
+    INCIDENT: Structure fire at 456 Elm Road
+    CASUALTIES: Children trapped
+    ACTION: Dispatched fire engine, ladder truck, ambulance, battalion chief
+
+[14:22:18] Started transcription session
+[14:23:05] Transcript saved: transcript_20230401_142305.txt
+    INCIDENT: Gas leak at 789 Pine Avenue
+    CASUALTIES: None reported
+    ACTION: Dispatched hazmat unit and utility company
+
+[15:47:32] Started transcription session
+[15:48:19] Transcript saved: transcript_20230401_154819.txt
+    INCIDENT: Kitchen fire at 321 Cedar Street
+    CASUALTIES: Elderly person trapped
+    ACTION: Dispatched fire engine, ambulance, and rescue unit

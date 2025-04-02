@@ -1,0 +1,26 @@
+[
+  {
+    "incident_type": "kitchen fire",
+    "address": "unknown address",
+    "casualties": "none",
+    "incident_type_confidence": 1.0,
+    "casualties_confidence": 0.86,
+    "confidence": 0.93,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 3.0,
+    "priority_level": "HIGH",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-02T00:07:27.604118",
+    "transcript": "Speaker 2: It's in the kitchen at the back of the house. The flames are getting bigger. Oh no, I think the curtains caught fire too!"
+  }
+]

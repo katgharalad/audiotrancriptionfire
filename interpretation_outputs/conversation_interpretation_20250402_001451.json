@@ -1,0 +1,28 @@
+{
+  "interpretation": {
+    "incident_type": "kitchen fire",
+    "address": "123 Oak Street",
+    "casualties": "pets trapped",
+    "timestamp": "2025-04-02T00:14:50.252633",
+    "transcript": "911, what's your emergency? There's a kitchen fire at 123 Oak Street! The stove caught fire and it's spreading quickly. Is anyone injured? Have you evacuated the building? No one is hurt, but my dog is still inside. I ran out as soon as I saw the flames. Stay outside. I'm sending fire units to your ..."
+  },
+  "routing": {
+    "status": "processed",
+    "handler": "kitchen_fire",
+    "timestamp": "2025-04-02T00:14:51.211478",
+    "message": "Dispatching units to kitchen fire",
+    "resources": [
+      "fire_engine",
+      "ambulance"
+    ],
+    "interpretation": {
+      "incident_type": "kitchen fire",
+      "address": "123 Oak Street",
+      "casualties": "pets trapped",
+      "timestamp": "2025-04-02T00:14:50.252633",
+      "transcript": "911, what's your emergency? There's a kitchen fire at 123 Oak Street! The stove caught fire and it's spreading quickly. Is anyone injured? Have you evacuated the building? No one is hurt, but my dog is still inside. I ran out as soon as I saw the flames. Stay outside. I'm sending fire units to your ...",
+      "priority": 3,
+      "priority_level": "HIGH"
+    }
+  }
+}

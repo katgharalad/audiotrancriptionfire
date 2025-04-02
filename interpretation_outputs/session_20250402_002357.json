@@ -1,0 +1,26 @@
+[
+  {
+    "incident_type": "wildfire",
+    "address": "unknown address",
+    "casualties": "unknown number trapped",
+    "incident_type_confidence": 0.19,
+    "casualties_confidence": 1.0,
+    "confidence": 0.59,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.5,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-02T00:23:57.393020",
+    "transcript": "Speaker 2: There's a unknown at unknown address. none."
+  }
+]

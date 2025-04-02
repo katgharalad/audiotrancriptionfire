@@ -1,0 +1,26 @@
+[
+  {
+    "incident_type": "gas leak",
+    "address": "unknown address",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.98,
+    "casualties_confidence": 0.23,
+    "confidence": 0.6,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.8,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-02T00:07:28.244528",
+    "transcript": "Speaker 2: There's a gas line in the kitchen. I didn't have time to turn off the gas. Please tell them to be careful."
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "interpretation": {
+    "incident_type": "wildfire",
+    "address": "64 west windest street. peopl",
+    "casualties": "unknown number trapped",
+    "incident_type_confidence": 0.85,
+    "casualties_confidence": 0.8,
+    "confidence": 0.82,
+    "address_validation": {
+      "normalized_address": "64 west windest street. peopl",
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": "priority",
+    "priority_level": "priority_level",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true,
+      "text": "unknown number trapped"
+    },
+    "needs_verification": false,
+    "timestamp": "2025-04-02T00:21:31.871280",
+    "transcript": "Speaker Unknown [00:21:09]: 911 what's your emergency? I'm standing standing outside 64 West Windest Street and there's a fire a fire in my home. Are there any casualties? Yes. Yes, there are two casualties Where did the Where did the fire start? The fire started to gas stove. Are there any children..."
+  },
+  "routing": {
+    "status": "processed",
+    "handler": "wildfire",
+    "timestamp": "2025-04-02T00:21:31.990477",
+    "message": "Dispatching wildland fire units and requesting mutual aid",
+    "resources": [
+      "brush_units",
+      "water_tenders",
+      "air_support",
+      "mutual_aid"
+    ],
+    "interpretation": {
+      "incident_type": "wildfire",
+      "address": "64 west windest street. peopl",
+      "casualties": "unknown number trapped",
+      "incident_type_confidence": 0.85,
+      "casualties_confidence": 0.8,
+      "confidence": 0.82,
+      "address_validation": {
+        "normalized_address": "64 west windest street. peopl",
+        "valid": false,
+        "confidence": 0.0,
+        "needs_verification": true
+      },
+      "priority": 5,
+      "priority_level": "CRITICAL",
+      "casualties_structured": {
+        "children": false,
+        "elderly": false,
+        "pets": false,
+        "caller": true,
+        "text": "unknown number trapped"
+      },
+      "needs_verification": false,
+      "timestamp": "2025-04-02T00:21:31.871280",
+      "transcript": "Speaker Unknown [00:21:09]: 911 what's your emergency? I'm standing standing outside 64 West Windest Street and there's a fire a fire in my home. Are there any casualties? Yes. Yes, there are two casualties Where did the Where did the fire start? The fire started to gas stove. Are there any children..."
+    }
+  }
+}

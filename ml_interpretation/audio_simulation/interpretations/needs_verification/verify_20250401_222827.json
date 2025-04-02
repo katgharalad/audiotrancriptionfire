@@ -1,0 +1,24 @@
+{
+  "incident_type": "gas leak",
+  "address": "5149 south lake hill rd.",
+  "casualties": "elderly person trapped",
+  "incident_type_confidence": 0.97,
+  "casualties_confidence": 0.97,
+  "confidence": 0.97,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 4.9,
+  "priority_level": "CRITICAL",
+  "casualties_structured": {
+    "children": false,
+    "elderly": true,
+    "pets": false,
+    "caller": false
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:28:27.258916",
+  "transcript": "Speaker 2: There's a gas leak at 5149 SOUTH LAKE HILL RD. Casualties reported: elderly person trapped"
+}

@@ -1,0 +1,40 @@
+{
+  "confidence_metrics": {
+    "correct_predictions": 5,
+    "high_confidence_correct": 3,
+    "high_confidence_incorrect": 0,
+    "low_confidence_correct": 2,
+    "low_confidence_incorrect": 0,
+    "average_confidence_correct": 0.71,
+    "average_confidence_incorrect": 0,
+    "accuracy": 1.0,
+    "ece": 0.27
+  },
+  "address_metrics": {
+    "total": 5,
+    "valid": 0,
+    "invalid": 5,
+    "needs_verification": 5,
+    "avg_confidence": 0.0,
+    "verification_rate": 1.0
+  },
+  "priority_metrics": {
+    "mse": 0.26999999999999996,
+    "r2": -0.03846153846153855,
+    "exact_match": 1,
+    "within_0.5": 4,
+    "within_1.0": 5,
+    "exact_match_rate": 0.2,
+    "within_0.5_rate": 0.8,
+    "within_1.0_rate": 1.0
+  },
+  "casualties_metrics": {
+    "total": 5,
+    "children_identified": 1,
+    "elderly_identified": 1,
+    "pets_identified": 1,
+    "caller_identified": 1,
+    "total_categories_identified": 4,
+    "avg_categories_per_casualty": 0.8
+  }
+}

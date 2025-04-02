@@ -1,0 +1,194 @@
+[
+  {
+    "incident_type": "kitchen fire",
+    "address": "123 main street",
+    "casualties": "none",
+    "incident_type_confidence": 0.99,
+    "casualties_confidence": 1.0,
+    "confidence": 0.99,
+    "address_validation": {
+      "valid": true,
+      "confidence": 0.6875,
+      "needs_verification": true
+    },
+    "priority": 3.0,
+    "priority_level": "HIGH",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.785411",
+    "transcript": "Speaker 2: There's a kitchen fire at 123 Main Street. No one is hurt."
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "456 elm road",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.94,
+    "casualties_confidence": 0.24,
+    "confidence": 0.59,
+    "address_validation": {
+      "valid": true,
+      "confidence": 0.21621621621621623,
+      "needs_verification": true
+    },
+    "priority": 4.8,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.788306",
+    "transcript": "Speaker 2: Structure fire at 456 Elm Road. My wife is trapped upstairs."
+  },
+  {
+    "incident_type": "gas leak",
+    "address": "789 oak avenue",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.98,
+    "casualties_confidence": 0.22,
+    "confidence": 0.6,
+    "address_validation": {
+      "valid": true,
+      "confidence": 0.6666666666666666,
+      "needs_verification": true
+    },
+    "priority": 4.8,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.791235",
+    "transcript": "Speaker 2: Gas leak at 789 Oak Avenue. The whole family evacuated."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "101 pine street.",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.18,
+    "casualties_confidence": 0.2,
+    "confidence": 0.19,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 5.0,
+    "priority_level": "MEDIUM",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.793682",
+    "transcript": "Speaker 2: I'm not sure what's happening but there's smoke everywhere at 101 Pine Street."
+  },
+  {
+    "incident_type": "electrical fire",
+    "address": "202 maple drive",
+    "casualties": "pets inside",
+    "incident_type_confidence": 0.15,
+    "casualties_confidence": 0.53,
+    "confidence": 0.34,
+    "address_validation": {
+      "valid": true,
+      "confidence": 0.21568627450980393,
+      "needs_verification": true
+    },
+    "priority": 4.0,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": true,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.796091",
+    "transcript": "Speaker 2: The building at 202 Maple Drive is on fire and there might be people inside."
+  },
+  {
+    "incident_type": "kitchen fire",
+    "address": "303 cherry lane. it started in the kitchen but spread to the living room. my dog is st",
+    "casualties": "pets inside",
+    "incident_type_confidence": 0.69,
+    "casualties_confidence": 0.48,
+    "confidence": 0.58,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 3.5,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": true,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.798308",
+    "transcript": "Speaker 2: There's a fire at 303 Cherry Lane. It started in the kitchen but spread to the living room. My dog is still inside."
+  },
+  {
+    "incident_type": "electrical fire",
+    "address": "505 washington blvd apt 3c. childr",
+    "casualties": "children trapped",
+    "incident_type_confidence": 0.16,
+    "casualties_confidence": 0.92,
+    "confidence": 0.54,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.5,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": true,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.801733",
+    "transcript": "Speaker 2: Fire at 505 Washington Blvd apt 3C. Children trapped."
+  },
+  {
+    "incident_type": "electrical fire",
+    "address": "606 jefferson st.",
+    "casualties": "none",
+    "incident_type_confidence": 0.16,
+    "casualties_confidence": 0.39,
+    "confidence": 0.28,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 3.5,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:07.804514",
+    "transcript": "Speaker 2: Car on fire at 606 Jefferson St. No injuries."
+  }
+]

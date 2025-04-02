@@ -11,6 +11,7 @@ A lightweight, efficient real-time speech transcription system with automatic sp
 - **Optimized for speed** with minimal latency and reasonable accuracy
 - **Clean, professional output** formatting
 - **Automatic transcript saving** to text files with timestamps
+- **Emergency Call ML Interpretation** ✨ NEW! - Classifies emergency calls with address extraction and incident routing
 
 ## Requirements
 
@@ -37,6 +38,11 @@ A lightweight, efficient real-time speech transcription system with automatic sp
    pip install -r requirements.txt
    ```
 
+4. If you want to use the ML interpretation layer, install its dependencies:
+```
+pip install -r ml_interpretation/requirements.txt
+```
+
 ## Usage
 
 1. Run the main script:
@@ -57,6 +63,34 @@ A lightweight, efficient real-time speech transcription system with automatic sp
 4. Press ENTER at any time to stop recording
    - The complete transcript will be saved automatically to a file in the current directory
    - The filename will include the date and time of the recording
+
+### Using the ML Interpretation Layer for Emergency Calls
+
+For emergency dispatch scenarios, you can use the ML interpretation layer to automatically classify incidents, extract addresses, and identify casualties from transcripts.
+
+1. To run the integrated system:
+```
+python ml_interpretation/integration.py
+```
+
+2. For more information, see the integration guide:
+```
+cat INTEGRATION.md
+```
+
+3. To run various demo modes:
+```
+python ml_interpretation/integrated_demo.py --mode all
+```
+
+4. Available modes:
+   * `all` - Run all components
+   * `audio` - Simulate audio transcripts
+   * `router` - Test incident routing
+   * `interpreter` - Test transcript interpretation
+   * `test` - Run performance tests
+   * `enhanced` - Test enhanced features
+   * `visualize` - Generate visualizations
 
 ## How It Works
 
@@ -83,6 +117,16 @@ A lightweight, efficient real-time speech transcription system with automatic sp
 - Filters out repetitions and common speech artifacts
 - Saves complete transcript to a text file when finished
 
+### Emergency Call Interpretation
+- Identifies incident types (fire type, gas leak, etc.)
+- Extracts address information from transcripts
+- Classifies casualty information
+- Determines priority level (HIGH, URGENT, CRITICAL)
+- Validates addresses against a database
+- Routes incidents to appropriate handlers
+- Provides confidence scores for ML predictions
+- Flags low-confidence cases for verification
+
 ## Limitations
 
 - Speaker identification works best with distinct voices
@@ -90,12 +134,17 @@ A lightweight, efficient real-time speech transcription system with automatic sp
 - Very quiet speech might not be detected
 - Accuracy is traded for speed - some words may be misinterpreted
 
-## Future Improvements
+## Advanced ML Features
 
-- Add support for more languages
-- Improve speaker identification accuracy
-- Add voice biometrics for known speaker recognition
-- Create a graphical user interface
+The ML interpretation layer includes several enhanced features:
+
+- **Confidence Scores**: ML model prediction confidence is surfaced
+- **Address Validation**: Addresses are validated against Delaware's database
+- **Priority Prediction**: Incidents are assigned priority levels for dispatch
+- **Structured Casualties**: Casualties are categorized (children, elderly, pets, caller)
+- **Verification Queue**: Low-confidence predictions are flagged for verification
+
+For more details, see the ML interpretation layer's [README.md](ml_interpretation/README.md).
 
 ## License
 

@@ -1,0 +1,24 @@
+{
+  "incident_type": "false alarm",
+  "address": "7600 riverside dr.",
+  "casualties": "unknown number trapped",
+  "incident_type_confidence": 1.0,
+  "casualties_confidence": 1.0,
+  "confidence": 1.0,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 2.5,
+  "priority_level": "HIGH",
+  "casualties_structured": {
+    "children": false,
+    "elderly": false,
+    "pets": false,
+    "caller": true
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:42:34.319678",
+  "transcript": "Speaker 2: There's a false alarm at 7600 RIVERSIDE DR. Casualties reported: unknown number trapped"
+}

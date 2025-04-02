@@ -1,0 +1,45 @@
+{
+  "scenario_type": "gas_leak",
+  "conversation": [
+    {
+      "transcript": "Speaker 2: I smell gas in my house at 456 Oak Avenue.",
+      "interpretation": {
+        "incident_type": "gas leak",
+        "address": "456 oak avenue.",
+        "casualties": "caller trapped",
+        "timestamp": "2025-04-01T22:12:23.710513",
+        "transcript": "Speaker 2: I smell gas in my house at 456 Oak Avenue."
+      }
+    },
+    {
+      "transcript": "Speaker 2: Yes, we're all outside now.",
+      "interpretation": {
+        "incident_type": "wildfire",
+        "address": "Unknown address",
+        "casualties": "caller trapped",
+        "timestamp": "2025-04-01T22:12:27.383900",
+        "transcript": "Speaker 2: Yes, we're all outside now."
+      }
+    },
+    {
+      "transcript": "Speaker 2: No, I just got everyone out as quickly as possible.",
+      "interpretation": {
+        "incident_type": "wildfire",
+        "address": "Unknown address",
+        "casualties": "none",
+        "timestamp": "2025-04-01T22:12:32.313665",
+        "transcript": "Speaker 2: No, I just got everyone out as quickly as possible."
+      }
+    },
+    {
+      "transcript": "Speaker 2: The smell is getting stronger even from outside.",
+      "interpretation": {
+        "incident_type": "wildfire",
+        "address": "Unknown address",
+        "casualties": "none",
+        "timestamp": "2025-04-01T22:12:36.130560",
+        "transcript": "Speaker 2: The smell is getting stronger even from outside."
+      }
+    }
+  ]
+}

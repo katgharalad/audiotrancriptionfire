@@ -1,0 +1,19 @@
+{
+  "test_set_size": 5639,
+  "latency": {
+    "total_prediction_time_seconds": 0.1648261547088623,
+    "average_prediction_time_ms": 0.029229678082791682
+  },
+  "incident_type_classification": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "casualties_classification": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  }
+}

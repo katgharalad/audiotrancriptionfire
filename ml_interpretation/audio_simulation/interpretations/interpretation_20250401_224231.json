@@ -1,0 +1,24 @@
+{
+  "incident_type": "structure fire",
+  "address": "34 neil st.",
+  "casualties": "unknown number trapped",
+  "incident_type_confidence": 0.98,
+  "casualties_confidence": 0.99,
+  "confidence": 0.98,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 4.0,
+  "priority_level": "URGENT",
+  "casualties_structured": {
+    "children": false,
+    "elderly": false,
+    "pets": false,
+    "caller": true
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:42:31.488268",
+  "transcript": "Speaker 2: There's a structure fire at 34 NEIL ST. Casualties reported: unknown number trapped"
+}

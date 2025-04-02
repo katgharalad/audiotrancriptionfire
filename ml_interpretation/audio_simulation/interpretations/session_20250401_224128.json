@@ -1,0 +1,98 @@
+[
+  {
+    "incident_type": "vehicle fire",
+    "address": "3140 liberty rd.",
+    "casualties": "children trapped",
+    "incident_type_confidence": 1.0,
+    "casualties_confidence": 1.0,
+    "confidence": 1.0,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.0,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": true,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:28.178561",
+    "transcript": "Speaker 2: There's a vehicle fire at 3140 LIBERTY RD. Casualties reported: children trapped"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "343 w william st.",
+    "casualties": "caller escaped alone",
+    "incident_type_confidence": 0.98,
+    "casualties_confidence": 0.99,
+    "confidence": 0.98,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.2,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:36.102440",
+    "transcript": "Speaker 2: There's a structure fire at 343 W WILLIAM ST. Casualties reported: caller escaped alone"
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "1100 sunbury rd st",
+    "casualties": "none",
+    "incident_type_confidence": 0.94,
+    "casualties_confidence": 0.96,
+    "confidence": 0.95,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.5,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:38.145487",
+    "transcript": "Speaker 2: There's a wildfire at 1100 SUNBURY RD STE 802. No one is hurt."
+  },
+  {
+    "incident_type": "kitchen fire",
+    "address": "100 georgetowne dr",
+    "casualties": "caller escaped alone",
+    "incident_type_confidence": 0.98,
+    "casualties_confidence": 0.99,
+    "confidence": 0.98,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 3.2,
+    "priority_level": "HIGH",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:41:43.058704",
+    "transcript": "Speaker 2: There's a kitchen fire at 100 GEORGETOWNE DR APT 222. Casualties reported: caller escaped alone"
+  }
+]

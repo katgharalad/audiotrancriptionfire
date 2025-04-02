@@ -1,0 +1,24 @@
+{
+  "incident_type": "electrical fire",
+  "address": "606 jefferson st.",
+  "casualties": "none",
+  "incident_type_confidence": 0.16,
+  "casualties_confidence": 0.39,
+  "confidence": 0.28,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 3.5,
+  "priority_level": "URGENT",
+  "casualties_structured": {
+    "children": false,
+    "elderly": false,
+    "pets": false,
+    "caller": false
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:42:37.580877",
+  "transcript": "Speaker 2: Car on fire at 606 Jefferson St. No injuries."
+}

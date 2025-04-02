@@ -1,0 +1,24 @@
+{
+  "incident_type": "kitchen fire",
+  "address": "29 equestrian way.",
+  "casualties": "elderly person trapped",
+  "incident_type_confidence": 0.98,
+  "casualties_confidence": 0.99,
+  "confidence": 0.98,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 3.9,
+  "priority_level": "URGENT",
+  "casualties_structured": {
+    "children": false,
+    "elderly": true,
+    "pets": false,
+    "caller": false
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:42:06.116398",
+  "transcript": "Speaker 2: There's a kitchen fire at 29 EQUESTRIAN WAY. Casualties reported: elderly person trapped"
+}

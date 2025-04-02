@@ -1,0 +1,24 @@
+{
+  "incident_type": "industrial fire",
+  "address": "262 kerry park cir.",
+  "casualties": "pets inside",
+  "incident_type_confidence": 0.98,
+  "casualties_confidence": 0.98,
+  "confidence": 0.98,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 3.0,
+  "priority_level": "HIGH",
+  "casualties_structured": {
+    "children": false,
+    "elderly": false,
+    "pets": true,
+    "caller": false
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:28:19.951267",
+  "transcript": "Speaker 2: There's a industrial fire at 262 KERRY PARK CIR. Casualties reported: pets inside"
+}

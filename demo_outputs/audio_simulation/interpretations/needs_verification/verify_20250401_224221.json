@@ -1,0 +1,24 @@
+{
+  "incident_type": "kitchen fire",
+  "address": "147 falls peak ln.",
+  "casualties": "pets inside",
+  "incident_type_confidence": 0.99,
+  "casualties_confidence": 0.99,
+  "confidence": 0.99,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 3.5,
+  "priority_level": "URGENT",
+  "casualties_structured": {
+    "children": false,
+    "elderly": false,
+    "pets": true,
+    "caller": false
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:42:21.477713",
+  "transcript": "Speaker 2: There's a kitchen fire at 147 FALLS PEAK LN. Casualties reported: pets inside"
+}

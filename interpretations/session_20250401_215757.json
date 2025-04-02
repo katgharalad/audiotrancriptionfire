@@ -1,0 +1,23 @@
+[
+  {
+    "incident_type": "kitchen fire",
+    "address": "123 oak street.",
+    "casualties": "none",
+    "timestamp": "2025-04-01T21:57:57.137253",
+    "transcript": "Speaker 2: There's a kitchen fire at 123 Oak Street. My wife is trapped in the bathroom."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "Unknown address",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T21:57:57.139596",
+    "transcript": "Speaker 2: Yes, flames are coming from the stove and spreading to the cabinets."
+  },
+  {
+    "incident_type": "industrial fire",
+    "address": "Unknown address",
+    "casualties": "none",
+    "timestamp": "2025-04-01T21:57:57.141193",
+    "transcript": "Speaker 2: The fire is getting worse. Please hurry!"
+  }
+]

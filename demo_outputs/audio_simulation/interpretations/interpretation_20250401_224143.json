@@ -1,0 +1,24 @@
+{
+  "incident_type": "kitchen fire",
+  "address": "100 georgetowne dr",
+  "casualties": "caller escaped alone",
+  "incident_type_confidence": 0.98,
+  "casualties_confidence": 0.99,
+  "confidence": 0.98,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 3.2,
+  "priority_level": "HIGH",
+  "casualties_structured": {
+    "children": false,
+    "elderly": false,
+    "pets": false,
+    "caller": true
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:41:43.058704",
+  "transcript": "Speaker 2: There's a kitchen fire at 100 GEORGETOWNE DR APT 222. Casualties reported: caller escaped alone"
+}

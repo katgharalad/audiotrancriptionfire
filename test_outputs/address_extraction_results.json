@@ -1,0 +1,32 @@
+[
+  {
+    "transcript": "Speaker 2: There's a kitchen fire at 123 Main Street. No one is hurt.",
+    "extracted_address": "123 main street",
+    "incident_type": "kitchen fire",
+    "casualties": "none"
+  },
+  {
+    "transcript": "Speaker 2: Gas leak reported at 456 Oak Avenue apt 7B. Everyone has evacuated.",
+    "extracted_address": "456 oak avenue",
+    "incident_type": "gas leak",
+    "casualties": "caller trapped"
+  },
+  {
+    "transcript": "Speaker 2: Structural fire at 789 Washington Boulevard. Elderly person trapped inside.",
+    "extracted_address": "789 washington boulevard",
+    "incident_type": "electrical fire",
+    "casualties": "elderly person trapped"
+  },
+  {
+    "transcript": "Speaker 2: Vehicle fire at 10 Liberty Lane. The caller is trapped.",
+    "extracted_address": "10 liberty lane",
+    "incident_type": "vehicle fire",
+    "casualties": "caller trapped"
+  },
+  {
+    "transcript": "Speaker 2: Wildfire reported near 55 Pinecrest Drive. Children are in danger.",
+    "extracted_address": "55 pinecrest drive",
+    "incident_type": "wildfire",
+    "casualties": "children trapped"
+  }
+]

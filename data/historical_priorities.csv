@@ -1,0 +1,201 @@
+incident_type,casualties,priority
+vehicle fire,children trapped,3.9
+wildfire,elderly person trapped,5.0
+gas leak,elderly person trapped,5.0
+structure fire,children trapped,5.0
+vehicle fire,caller trapped,3.9
+kitchen fire,children trapped,4.0
+kitchen fire,elderly person trapped,3.8
+wildfire,none,4.5
+wildfire,elderly person trapped,5.0
+structure fire,pets inside,4.3
+structure fire,children trapped,4.9
+gas leak,pets inside,4.6
+kitchen fire,caller trapped,3.8
+medical emergency,pets inside,3.7
+gas leak,children trapped,4.9
+gas leak,children trapped,4.8
+vehicle fire,none,3.1
+gas leak,children trapped,5.0
+wildfire,multiple people trapped,5.0
+kitchen fire,multiple people trapped,3.9
+vehicle fire,pets inside,3.5
+wildfire,children trapped,5.0
+structure fire,children trapped,5.0
+kitchen fire,children trapped,4.2
+vehicle fire,multiple people trapped,3.9
+structure fire,caller trapped,4.7
+structure fire,elderly person trapped,4.8
+wildfire,caller trapped,5.0
+kitchen fire,elderly person trapped,4.1
+medical emergency,elderly person trapped,4.0
+gas leak,multiple people trapped,5.0
+vehicle fire,pets inside,3.2
+structure fire,none,4.3
+medical emergency,none,3.2
+wildfire,children trapped,5.0
+kitchen fire,elderly person trapped,4.2
+medical emergency,elderly person trapped,3.6
+vehicle fire,multiple people trapped,3.7
+structure fire,children trapped,5.0
+vehicle fire,pets inside,3.6
+structure fire,pets inside,4.3
+kitchen fire,children trapped,4.1
+wildfire,children trapped,5.0
+structure fire,multiple people trapped,5.0
+kitchen fire,pets inside,3.2
+wildfire,multiple people trapped,5.0
+vehicle fire,none,3.3
+gas leak,none,4.0
+medical emergency,elderly person trapped,3.8
+vehicle fire,caller trapped,3.8
+kitchen fire,elderly person trapped,3.9
+medical emergency,none,2.8
+wildfire,pets inside,5.0
+vehicle fire,caller trapped,3.6
+wildfire,elderly person trapped,5.0
+wildfire,pets inside,5.0
+vehicle fire,children trapped,4.0
+gas leak,multiple people trapped,4.8
+gas leak,pets inside,4.7
+vehicle fire,caller trapped,4.0
+wildfire,pets inside,4.8
+kitchen fire,children trapped,4.1
+wildfire,multiple people trapped,5.0
+medical emergency,none,3.0
+vehicle fire,caller trapped,3.8
+structure fire,none,4.1
+wildfire,children trapped,5.0
+gas leak,caller trapped,4.8
+gas leak,pets inside,4.4
+structure fire,elderly person trapped,4.9
+medical emergency,elderly person trapped,3.7
+gas leak,children trapped,4.8
+vehicle fire,none,3.2
+vehicle fire,multiple people trapped,4.2
+medical emergency,none,2.9
+kitchen fire,elderly person trapped,4.2
+kitchen fire,children trapped,4.3
+gas leak,multiple people trapped,5.0
+vehicle fire,elderly person trapped,3.9
+medical emergency,pets inside,3.8
+wildfire,elderly person trapped,5.0
+kitchen fire,multiple people trapped,3.9
+structure fire,children trapped,5.0
+wildfire,children trapped,5.0
+wildfire,none,4.7
+vehicle fire,elderly person trapped,3.8
+wildfire,children trapped,5.0
+kitchen fire,none,3.2
+kitchen fire,elderly person trapped,4.1
+vehicle fire,elderly person trapped,3.9
+vehicle fire,none,2.8
+gas leak,caller trapped,4.9
+kitchen fire,pets inside,3.5
+kitchen fire,pets inside,3.3
+vehicle fire,none,2.7
+structure fire,elderly person trapped,4.8
+structure fire,pets inside,4.7
+vehicle fire,elderly person trapped,3.9
+vehicle fire,children trapped,3.7
+wildfire,pets inside,4.9
+medical emergency,children trapped,4.1
+medical emergency,children trapped,3.9
+kitchen fire,pets inside,3.3
+kitchen fire,children trapped,3.9
+wildfire,children trapped,5.0
+structure fire,caller trapped,4.5
+structure fire,elderly person trapped,5.0
+kitchen fire,children trapped,4.0
+kitchen fire,elderly person trapped,3.7
+kitchen fire,multiple people trapped,4.1
+gas leak,none,4.0
+vehicle fire,caller trapped,3.9
+structure fire,multiple people trapped,5.0
+vehicle fire,none,3.1
+structure fire,pets inside,4.5
+vehicle fire,pets inside,3.5
+gas leak,none,3.8
+gas leak,caller trapped,4.8
+kitchen fire,children trapped,4.0
+vehicle fire,pets inside,3.3
+medical emergency,none,2.8
+kitchen fire,multiple people trapped,3.7
+gas leak,children trapped,5.0
+medical emergency,children trapped,4.3
+kitchen fire,caller trapped,3.6
+medical emergency,caller trapped,3.9
+vehicle fire,pets inside,3.2
+medical emergency,elderly person trapped,3.7
+medical emergency,multiple people trapped,4.0
+gas leak,none,4.0
+gas leak,multiple people trapped,5.0
+wildfire,multiple people trapped,5.0
+vehicle fire,caller trapped,3.5
+kitchen fire,children trapped,4.0
+kitchen fire,elderly person trapped,3.7
+gas leak,none,3.9
+kitchen fire,children trapped,4.0
+gas leak,caller trapped,4.6
+vehicle fire,pets inside,3.4
+kitchen fire,caller trapped,3.7
+structure fire,elderly person trapped,5.0
+wildfire,none,4.5
+vehicle fire,pets inside,3.8
+gas leak,multiple people trapped,5.0
+structure fire,elderly person trapped,4.8
+kitchen fire,caller trapped,3.9
+medical emergency,children trapped,4.2
+medical emergency,pets inside,3.7
+vehicle fire,pets inside,3.4
+medical emergency,none,2.7
+kitchen fire,multiple people trapped,4.2
+vehicle fire,caller trapped,4.0
+medical emergency,elderly person trapped,4.1
+vehicle fire,caller trapped,3.6
+medical emergency,elderly person trapped,3.6
+medical emergency,children trapped,4.2
+kitchen fire,none,3.3
+medical emergency,pets inside,3.2
+structure fire,multiple people trapped,5.0
+kitchen fire,pets inside,3.4
+kitchen fire,caller trapped,3.5
+gas leak,children trapped,5.0
+wildfire,children trapped,5.0
+wildfire,multiple people trapped,5.0
+structure fire,children trapped,4.8
+medical emergency,pets inside,3.4
+structure fire,elderly person trapped,4.8
+vehicle fire,elderly person trapped,3.6
+gas leak,caller trapped,4.8
+structure fire,multiple people trapped,5.0
+gas leak,children trapped,5.0
+gas leak,children trapped,5.0
+vehicle fire,multiple people trapped,3.8
+wildfire,elderly person trapped,5.0
+kitchen fire,none,3.0
+gas leak,none,4.1
+kitchen fire,elderly person trapped,4.1
+structure fire,caller trapped,5.0
+vehicle fire,elderly person trapped,3.9
+medical emergency,pets inside,3.7
+vehicle fire,multiple people trapped,3.8
+gas leak,pets inside,4.3
+structure fire,caller trapped,4.7
+vehicle fire,pets inside,3.5
+kitchen fire,pets inside,3.8
+structure fire,multiple people trapped,5.0
+gas leak,pets inside,4.4
+vehicle fire,pets inside,3.7
+medical emergency,pets inside,3.4
+kitchen fire,caller trapped,3.9
+gas leak,children trapped,5.0
+medical emergency,children trapped,3.8
+kitchen fire,pets inside,3.8
+vehicle fire,pets inside,3.4
+vehicle fire,caller trapped,3.5
+vehicle fire,multiple people trapped,3.7
+gas leak,pets inside,4.3
+medical emergency,none,2.9
+gas leak,children trapped,4.8
+structure fire,none,3.8

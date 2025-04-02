@@ -1,0 +1,101 @@
+[
+  {
+    "status": "processed",
+    "handler": "kitchen_fire",
+    "timestamp": "2025-04-01T22:41:59.955443",
+    "message": "Dispatching units to kitchen fire",
+    "resources": [
+      "fire_engine",
+      "ambulance"
+    ],
+    "interpretation": {
+      "incident_type": "kitchen fire",
+      "address": "123 Oak Street",
+      "casualties": "none",
+      "timestamp": "2023-04-01T12:34:56",
+      "transcript": "Speaker 2: There's a kitchen fire at 123 Oak Street. No one is hurt.",
+      "priority": 3,
+      "priority_level": "HIGH"
+    }
+  },
+  {
+    "status": "processed",
+    "handler": "structure_fire",
+    "timestamp": "2025-04-01T22:42:00.456873",
+    "message": "Dispatching fire units to structure fire",
+    "resources": [
+      "fire_engine",
+      "ladder_truck",
+      "ambulance",
+      "battalion_chief"
+    ],
+    "interpretation": {
+      "incident_type": "structure fire",
+      "address": "456 Elm Road",
+      "casualties": "children trapped",
+      "timestamp": "2023-04-01T12:36:12",
+      "transcript": "Speaker 2: There's a house on fire at 456 Elm Road. There are children trapped inside.",
+      "priority": 5,
+      "priority_level": "CRITICAL"
+    }
+  },
+  {
+    "status": "processed",
+    "handler": "gas_leak",
+    "timestamp": "2025-04-01T22:42:00.962687",
+    "message": "Dispatching hazmat and fire units to gas leak",
+    "resources": [
+      "fire_engine",
+      "hazmat_unit",
+      "utility_company"
+    ],
+    "interpretation": {
+      "incident_type": "gas leak",
+      "address": "789 Pine Avenue",
+      "casualties": "caller escaped alone",
+      "timestamp": "2023-04-01T12:38:30",
+      "transcript": "Speaker 2: I smell gas at 789 Pine Avenue. I got out but my house is full of gas.",
+      "priority": 4.5,
+      "priority_level": "CRITICAL"
+    }
+  },
+  {
+    "status": "processed",
+    "handler": "vehicle_fire",
+    "timestamp": "2025-04-01T22:42:01.467845",
+    "message": "Dispatching units to vehicle fire",
+    "resources": [
+      "fire_engine"
+    ],
+    "interpretation": {
+      "incident_type": "vehicle fire",
+      "address": "101 Maple Drive",
+      "casualties": "caller trapped",
+      "timestamp": "2023-04-01T12:40:45",
+      "transcript": "Speaker 2: My car is on fire at 101 Maple Drive. I'm trapped inside!",
+      "priority": 4,
+      "priority_level": "URGENT"
+    }
+  },
+  {
+    "status": "processed",
+    "handler": "wildfire",
+    "timestamp": "2025-04-01T22:42:01.971797",
+    "message": "Dispatching wildland fire units and requesting mutual aid",
+    "resources": [
+      "brush_units",
+      "water_tenders",
+      "air_support",
+      "mutual_aid"
+    ],
+    "interpretation": {
+      "incident_type": "wildfire",
+      "address": "202 Forest Lane",
+      "casualties": "pets inside",
+      "timestamp": "2023-04-01T12:42:15",
+      "transcript": "Speaker 2: There's a wildfire near 202 Forest Lane. My pets are still in the house.",
+      "priority": 5,
+      "priority_level": "CRITICAL"
+    }
+  }
+]

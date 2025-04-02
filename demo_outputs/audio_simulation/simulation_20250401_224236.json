@@ -1,0 +1,275 @@
+{
+  "metrics": {
+    "total_transcripts": 9,
+    "caller_transcripts": 9,
+    "non_caller_transcripts": 0,
+    "interpretations_generated": 9,
+    "avg_interpretation_time": 0.005877256393432617,
+    "interpretation_times": [
+      0.0036401748657226562,
+      0.0073108673095703125,
+      0.007025957107543945,
+      0.007505178451538086,
+      0.003513813018798828,
+      0.008659839630126953,
+      0.0032851696014404297,
+      0.0062410831451416016,
+      0.005713224411010742
+    ]
+  },
+  "conversation": [
+    {
+      "timestamp": 0.0036640167236328125,
+      "transcript": "Speaker 2: There's a kitchen fire at 29 EQUESTRIAN WAY. Casualties reported: elderly person trapped",
+      "interpretation": {
+        "incident_type": "kitchen fire",
+        "address": "29 equestrian way.",
+        "casualties": "elderly person trapped",
+        "incident_type_confidence": 0.98,
+        "casualties_confidence": 0.99,
+        "confidence": 0.98,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 3.9,
+        "priority_level": "URGENT",
+        "casualties_structured": {
+          "children": false,
+          "elderly": true,
+          "pets": false,
+          "caller": false
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:06.116398",
+        "transcript": "Speaker 2: There's a kitchen fire at 29 EQUESTRIAN WAY. Casualties reported: elderly person trapped"
+      }
+    },
+    {
+      "timestamp": 2.7523791790008545,
+      "transcript": "Speaker 2: There's a structure fire at 31 FLAX ST STE 104. Casualties reported: caller escaped alone",
+      "interpretation": {
+        "incident_type": "structure fire",
+        "address": "31 flax st st",
+        "casualties": "caller escaped alone",
+        "incident_type_confidence": 0.94,
+        "casualties_confidence": 0.96,
+        "confidence": 0.95,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 4.2,
+        "priority_level": "URGENT",
+        "casualties_structured": {
+          "children": false,
+          "elderly": false,
+          "pets": false,
+          "caller": true
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:08.864798",
+        "transcript": "Speaker 2: There's a structure fire at 31 FLAX ST STE 104. Casualties reported: caller escaped alone"
+      }
+    },
+    {
+      "timestamp": 4.680613040924072,
+      "transcript": "Speaker 2: There's a false alarm at 186 HAWTHORN BLVD. No one is hurt.",
+      "interpretation": {
+        "incident_type": "false alarm",
+        "address": "186 hawthorn blvd.",
+        "casualties": "none",
+        "incident_type_confidence": 0.98,
+        "casualties_confidence": 0.99,
+        "confidence": 0.98,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 2.5,
+        "priority_level": "HIGH",
+        "casualties_structured": {
+          "children": false,
+          "elderly": false,
+          "pets": false,
+          "caller": false
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:10.792880",
+        "transcript": "Speaker 2: There's a false alarm at 186 HAWTHORN BLVD. No one is hurt."
+      }
+    },
+    {
+      "timestamp": 5.44706130027771,
+      "transcript": "Speaker 2: There's a industrial fire at 12 N SANDUSKY ST. Casualties reported: caller escaped alone",
+      "interpretation": {
+        "incident_type": "industrial fire",
+        "address": "12 n sandusky st.",
+        "casualties": "caller escaped alone",
+        "incident_type_confidence": 0.99,
+        "casualties_confidence": 1.0,
+        "confidence": 0.99,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 2.8,
+        "priority_level": "HIGH",
+        "casualties_structured": {
+          "children": false,
+          "elderly": false,
+          "pets": false,
+          "caller": true
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:11.558883",
+        "transcript": "Speaker 2: There's a industrial fire at 12 N SANDUSKY ST. Casualties reported: caller escaped alone"
+      }
+    },
+    {
+      "timestamp": 11.284121990203857,
+      "transcript": "Speaker 2: There's a false alarm at 112 N WASHINGTON ST. Casualties reported: elderly person trapped",
+      "interpretation": {
+        "incident_type": "false alarm",
+        "address": "112 n washington st.",
+        "casualties": "elderly person trapped",
+        "incident_type_confidence": 0.99,
+        "casualties_confidence": 0.99,
+        "confidence": 0.99,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 3.4,
+        "priority_level": "HIGH",
+        "casualties_structured": {
+          "children": false,
+          "elderly": true,
+          "pets": false,
+          "caller": false
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:17.397222",
+        "transcript": "Speaker 2: There's a false alarm at 112 N WASHINGTON ST. Casualties reported: elderly person trapped"
+      }
+    },
+    {
+      "timestamp": 15.366542100906372,
+      "transcript": "Speaker 2: There's a kitchen fire at 147 FALLS PEAK LN. Casualties reported: pets inside",
+      "interpretation": {
+        "incident_type": "kitchen fire",
+        "address": "147 falls peak ln.",
+        "casualties": "pets inside",
+        "incident_type_confidence": 0.99,
+        "casualties_confidence": 0.99,
+        "confidence": 0.99,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 3.5,
+        "priority_level": "URGENT",
+        "casualties_structured": {
+          "children": false,
+          "elderly": false,
+          "pets": true,
+          "caller": false
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:21.477713",
+        "transcript": "Speaker 2: There's a kitchen fire at 147 FALLS PEAK LN. Casualties reported: pets inside"
+      }
+    },
+    {
+      "timestamp": 20.975130081176758,
+      "transcript": "Speaker 2: There's a electrical fire at 747 WALLACE DR. Casualties reported: pets inside",
+      "interpretation": {
+        "incident_type": "electrical fire",
+        "address": "747 wallace dr.",
+        "casualties": "pets inside",
+        "incident_type_confidence": 0.98,
+        "casualties_confidence": 0.98,
+        "confidence": 0.98,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 4.0,
+        "priority_level": "URGENT",
+        "casualties_structured": {
+          "children": false,
+          "elderly": false,
+          "pets": true,
+          "caller": false
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:27.087976",
+        "transcript": "Speaker 2: There's a electrical fire at 747 WALLACE DR. Casualties reported: pets inside"
+      }
+    },
+    {
+      "timestamp": 25.376466035842896,
+      "transcript": "Speaker 2: There's a structure fire at 34 NEIL ST. Casualties reported: unknown number trapped",
+      "interpretation": {
+        "incident_type": "structure fire",
+        "address": "34 neil st.",
+        "casualties": "unknown number trapped",
+        "incident_type_confidence": 0.98,
+        "casualties_confidence": 0.99,
+        "confidence": 0.98,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 4.0,
+        "priority_level": "URGENT",
+        "casualties_structured": {
+          "children": false,
+          "elderly": false,
+          "pets": false,
+          "caller": true
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:31.488268",
+        "transcript": "Speaker 2: There's a structure fire at 34 NEIL ST. Casualties reported: unknown number trapped"
+      }
+    },
+    {
+      "timestamp": 28.207424879074097,
+      "transcript": "Speaker 2: There's a false alarm at 7600 RIVERSIDE DR. Casualties reported: unknown number trapped",
+      "interpretation": {
+        "incident_type": "false alarm",
+        "address": "7600 riverside dr.",
+        "casualties": "unknown number trapped",
+        "incident_type_confidence": 1.0,
+        "casualties_confidence": 1.0,
+        "confidence": 1.0,
+        "address_validation": {
+          "valid": false,
+          "confidence": 0.0,
+          "needs_verification": true
+        },
+        "priority": 2.5,
+        "priority_level": "HIGH",
+        "casualties_structured": {
+          "children": false,
+          "elderly": false,
+          "pets": false,
+          "caller": true
+        },
+        "needs_verification": true,
+        "timestamp": "2025-04-01T22:42:34.319678",
+        "transcript": "Speaker 2: There's a false alarm at 7600 RIVERSIDE DR. Casualties reported: unknown number trapped"
+      }
+    }
+  ],
+  "duration": 30.00503897666931
+}

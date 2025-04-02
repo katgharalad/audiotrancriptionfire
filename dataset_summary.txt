@@ -1,0 +1,37 @@
+Dataset shape: (31896, 8)
+Column names: ['transcript', 'incident_type', 'address', 'city', 'zipcode', 'casualties', 'reporting_time', 'reporter']
+Missing values:
+transcript        0
+incident_type     0
+address           0
+city              0
+zipcode           0
+casualties        0
+reporting_time    0
+reporter          0
+dtype: int64
+
+Incident Type Statistics:
+  - electrical fire: 4064 (12.74%)
+  - gas leak: 4031 (12.64%)
+  - structure fire: 4013 (12.58%)
+  - false alarm: 3978 (12.47%)
+  - vehicle fire: 3973 (12.46%)
+  - kitchen fire: 3958 (12.41%)
+  - wildfire: 3946 (12.37%)
+  - industrial fire: 3933 (12.33%)
+
+Casualties Statistics:
+  - caller trapped: 4712 (14.77%)
+  - none: 4608 (14.45%)
+  - unknown number trapped: 4590 (14.39%)
+  - children trapped: 4535 (14.22%)
+  - caller escaped alone: 4524 (14.18%)
+  - pets inside: 4520 (14.17%)
+  - elderly person trapped: 4407 (13.82%)
+
+Speaker Statistics:
+  - Speaker 2: 28195 (88.40%)
+  - Speaker 4: 1239 (3.88%)
+  - Speaker 1: 1237 (3.88%)
+  - Speaker 3: 1225 (3.84%)

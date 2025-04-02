@@ -1,0 +1,24 @@
+{
+  "incident_type": "structure fire",
+  "address": "54 village gate blvd.",
+  "casualties": "children trapped",
+  "incident_type_confidence": 0.98,
+  "casualties_confidence": 0.98,
+  "confidence": 0.98,
+  "address_validation": {
+    "valid": false,
+    "confidence": 0.0,
+    "needs_verification": true
+  },
+  "priority": 5.0,
+  "priority_level": "MEDIUM",
+  "casualties_structured": {
+    "children": true,
+    "elderly": false,
+    "pets": false,
+    "caller": false
+  },
+  "needs_verification": true,
+  "timestamp": "2025-04-01T22:28:25.224167",
+  "transcript": "Speaker 2: There's a structure fire at 54 VILLAGE GATE BLVD. Casualties reported: children trapped"
+}

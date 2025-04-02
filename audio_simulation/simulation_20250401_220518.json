@@ -1,0 +1,122 @@
+{
+  "metrics": {
+    "total_transcripts": 11,
+    "caller_transcripts": 9,
+    "non_caller_transcripts": 2,
+    "interpretations_generated": 9,
+    "avg_interpretation_time": 0.004581345452202691,
+    "interpretation_times": [
+      0.00825810432434082,
+      0.0033631324768066406,
+      0.003690004348754883,
+      0.0034699440002441406,
+      0.004165172576904297,
+      0.006107807159423828,
+      0.0038301944732666016,
+      0.004007816314697266,
+      0.004339933395385742
+    ]
+  },
+  "conversation": [
+    {
+      "timestamp": 2.916769027709961,
+      "transcript": "Speaker 2: There's a electrical fire at 311 SILVER FOX WAY. Casualties reported: unknown number trapped",
+      "interpretation": {
+        "incident_type": "electrical fire",
+        "address": "311 silver fox way.",
+        "casualties": "unknown number trapped",
+        "timestamp": "2025-04-01T22:04:51.892096",
+        "transcript": "Speaker 2: There's a electrical fire at 311 SILVER FOX WAY. Casualties reported: unknown number trapped"
+      }
+    },
+    {
+      "timestamp": 6.943063020706177,
+      "transcript": "Speaker 2: There's a vehicle fire at 6248 TAGGART RD. Casualties reported: caller trapped",
+      "interpretation": {
+        "incident_type": "vehicle fire",
+        "address": "6248 taggart rd.",
+        "casualties": "caller trapped",
+        "timestamp": "2025-04-01T22:04:55.918227",
+        "transcript": "Speaker 2: There's a vehicle fire at 6248 TAGGART RD. Casualties reported: caller trapped"
+      }
+    },
+    {
+      "timestamp": 10.12230396270752,
+      "transcript": "Speaker 2: There's a false alarm at 1678 TIMBER LAKE DR. Casualties reported: elderly person trapped",
+      "interpretation": {
+        "incident_type": "false alarm",
+        "address": "1678 timber lake dr.",
+        "casualties": "elderly person trapped",
+        "timestamp": "2025-04-01T22:04:59.097237",
+        "transcript": "Speaker 2: There's a false alarm at 1678 TIMBER LAKE DR. Casualties reported: elderly person trapped"
+      }
+    },
+    {
+      "timestamp": 14.809278011322021,
+      "transcript": "Speaker 2: There's a structure fire at 5202 US HIGHWAY 23 N Area3-81. Casualties reported: unknown number trapped",
+      "interpretation": {
+        "incident_type": "structure fire",
+        "address": "5202 us highway",
+        "casualties": "unknown number trapped",
+        "timestamp": "2025-04-01T22:05:03.784375",
+        "transcript": "Speaker 2: There's a structure fire at 5202 US HIGHWAY 23 N Area3-81. Casualties reported: unknown number trapped"
+      }
+    },
+    {
+      "timestamp": 17.47602415084839,
+      "transcript": "Speaker 2: There's a structure fire at 523 BRICKSTONE DR. Casualties reported: unknown number trapped",
+      "interpretation": {
+        "incident_type": "structure fire",
+        "address": "523 brickstone dr.",
+        "casualties": "unknown number trapped",
+        "timestamp": "2025-04-01T22:05:06.451006",
+        "transcript": "Speaker 2: There's a structure fire at 523 BRICKSTONE DR. Casualties reported: unknown number trapped"
+      }
+    },
+    {
+      "timestamp": 19.676043033599854,
+      "transcript": "Speaker 2: There's a industrial fire at 190 SEATRAIN DR. Casualties reported: caller escaped alone",
+      "interpretation": {
+        "incident_type": "industrial fire",
+        "address": "190 seatrain dr.",
+        "casualties": "caller escaped alone",
+        "timestamp": "2025-04-01T22:05:08.651088",
+        "transcript": "Speaker 2: There's a industrial fire at 190 SEATRAIN DR. Casualties reported: caller escaped alone"
+      }
+    },
+    {
+      "timestamp": 20.59095597267151,
+      "transcript": "Speaker 2: There's a gas leak at 61 ROSEMARY RUN. Casualties reported: caller trapped",
+      "interpretation": {
+        "incident_type": "gas leak",
+        "address": "Unknown address",
+        "casualties": "caller trapped",
+        "timestamp": "2025-04-01T22:05:09.566020",
+        "transcript": "Speaker 2: There's a gas leak at 61 ROSEMARY RUN. Casualties reported: caller trapped"
+      }
+    },
+    {
+      "timestamp": 26.513386011123657,
+      "transcript": "Speaker 2: There's a industrial fire at 108 DOGWOOD DR. Casualties reported: unknown number trapped",
+      "interpretation": {
+        "incident_type": "industrial fire",
+        "address": "108 dogwood dr.",
+        "casualties": "unknown number trapped",
+        "timestamp": "2025-04-01T22:05:15.488418",
+        "transcript": "Speaker 2: There's a industrial fire at 108 DOGWOOD DR. Casualties reported: unknown number trapped"
+      }
+    },
+    {
+      "timestamp": 29.85891580581665,
+      "transcript": "Speaker 2: There's a false alarm at 94 LANTERN CHASE DR. Casualties reported: elderly person trapped",
+      "interpretation": {
+        "incident_type": "false alarm",
+        "address": "94 lantern chase dr.",
+        "casualties": "elderly person trapped",
+        "timestamp": "2025-04-01T22:05:18.833249",
+        "transcript": "Speaker 2: There's a false alarm at 94 LANTERN CHASE DR. Casualties reported: elderly person trapped"
+      }
+    }
+  ],
+  "duration": 30.005064964294434
+}

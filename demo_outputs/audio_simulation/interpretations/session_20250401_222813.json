@@ -1,0 +1,242 @@
+[
+  {
+    "incident_type": "electrical fire",
+    "address": "445 sunburst dr.",
+    "casualties": "unknown number trapped",
+    "incident_type_confidence": 0.97,
+    "casualties_confidence": 0.98,
+    "confidence": 0.97,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 3.5,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:13.584122",
+    "transcript": "Speaker 2: There's a electrical fire at 445 SUNBURST DR. Casualties reported: unknown number trapped"
+  },
+  {
+    "incident_type": "industrial fire",
+    "address": "262 kerry park cir.",
+    "casualties": "pets inside",
+    "incident_type_confidence": 0.98,
+    "casualties_confidence": 0.98,
+    "confidence": 0.98,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 3.0,
+    "priority_level": "HIGH",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": true,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:19.951267",
+    "transcript": "Speaker 2: There's a industrial fire at 262 KERRY PARK CIR. Casualties reported: pets inside"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "25 lakes at cheshire dr.",
+    "casualties": "caller escaped alone",
+    "incident_type_confidence": 0.97,
+    "casualties_confidence": 0.98,
+    "confidence": 0.97,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.2,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:21.548402",
+    "transcript": "Speaker 2: There's a structure fire at 25 LAKES AT CHESHIRE DR. Casualties reported: caller escaped alone"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "332 chelsea st",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.97,
+    "casualties_confidence": 0.96,
+    "confidence": 0.96,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.8,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:23.818429",
+    "transcript": "Speaker 2: There's a structure fire at 332 CHELSEA ST APT D. Casualties reported: caller trapped"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "54 village gate blvd.",
+    "casualties": "children trapped",
+    "incident_type_confidence": 0.98,
+    "casualties_confidence": 0.98,
+    "confidence": 0.98,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 5.0,
+    "priority_level": "MEDIUM",
+    "casualties_structured": {
+      "children": true,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:25.224167",
+    "transcript": "Speaker 2: There's a structure fire at 54 VILLAGE GATE BLVD. Casualties reported: children trapped"
+  },
+  {
+    "incident_type": "gas leak",
+    "address": "5149 south lake hill rd.",
+    "casualties": "elderly person trapped",
+    "incident_type_confidence": 0.97,
+    "casualties_confidence": 0.97,
+    "confidence": 0.97,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.9,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": true,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:27.258916",
+    "transcript": "Speaker 2: There's a gas leak at 5149 SOUTH LAKE HILL RD. Casualties reported: elderly person trapped"
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "6660 trinity mist way.",
+    "casualties": "unknown number trapped",
+    "incident_type_confidence": 0.97,
+    "casualties_confidence": 0.98,
+    "confidence": 0.97,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.5,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:30.142645",
+    "transcript": "Speaker 2: There's a wildfire at 6660 TRINITY MIST WAY. Casualties reported: unknown number trapped"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "46 lantern chase dr.",
+    "casualties": "children trapped",
+    "incident_type_confidence": 0.97,
+    "casualties_confidence": 0.97,
+    "confidence": 0.97,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 5.0,
+    "priority_level": "MEDIUM",
+    "casualties_structured": {
+      "children": true,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:31.840763",
+    "transcript": "Speaker 2: There's a structure fire at 46 LANTERN CHASE DR. Casualties reported: children trapped"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "421 inverness ave.",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.98,
+    "casualties_confidence": 0.97,
+    "confidence": 0.97,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.8,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:34.990512",
+    "transcript": "Speaker 2: There's a structure fire at 421 INVERNESS AVE. Casualties reported: caller trapped"
+  },
+  {
+    "incident_type": "false alarm",
+    "address": "346 n franklin st.",
+    "casualties": "unknown number trapped",
+    "incident_type_confidence": 0.99,
+    "casualties_confidence": 0.99,
+    "confidence": 0.99,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 2.5,
+    "priority_level": "HIGH",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T22:28:39.223069",
+    "transcript": "Speaker 2: There's a false alarm at 346 N FRANKLIN ST. Casualties reported: unknown number trapped"
+  }
+]

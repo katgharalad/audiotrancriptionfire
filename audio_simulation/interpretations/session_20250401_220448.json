@@ -1,0 +1,93 @@
+[
+  {
+    "incident_type": "electrical fire",
+    "address": "311 silver fox way.",
+    "casualties": "unknown number trapped",
+    "timestamp": "2025-04-01T22:04:51.892096",
+    "transcript": "Speaker 2: There's a electrical fire at 311 SILVER FOX WAY. Casualties reported: unknown number trapped"
+  },
+  {
+    "incident_type": "vehicle fire",
+    "address": "6248 taggart rd.",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T22:04:55.918227",
+    "transcript": "Speaker 2: There's a vehicle fire at 6248 TAGGART RD. Casualties reported: caller trapped"
+  },
+  {
+    "incident_type": "false alarm",
+    "address": "1678 timber lake dr.",
+    "casualties": "elderly person trapped",
+    "timestamp": "2025-04-01T22:04:59.097237",
+    "transcript": "Speaker 2: There's a false alarm at 1678 TIMBER LAKE DR. Casualties reported: elderly person trapped"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "5202 us highway",
+    "casualties": "unknown number trapped",
+    "timestamp": "2025-04-01T22:05:03.784375",
+    "transcript": "Speaker 2: There's a structure fire at 5202 US HIGHWAY 23 N Area3-81. Casualties reported: unknown number trapped"
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "523 brickstone dr.",
+    "casualties": "unknown number trapped",
+    "timestamp": "2025-04-01T22:05:06.451006",
+    "transcript": "Speaker 2: There's a structure fire at 523 BRICKSTONE DR. Casualties reported: unknown number trapped"
+  },
+  {
+    "incident_type": "industrial fire",
+    "address": "190 seatrain dr.",
+    "casualties": "caller escaped alone",
+    "timestamp": "2025-04-01T22:05:08.651088",
+    "transcript": "Speaker 2: There's a industrial fire at 190 SEATRAIN DR. Casualties reported: caller escaped alone"
+  },
+  {
+    "incident_type": "gas leak",
+    "address": "Unknown address",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T22:05:09.566020",
+    "transcript": "Speaker 2: There's a gas leak at 61 ROSEMARY RUN. Casualties reported: caller trapped"
+  },
+  {
+    "incident_type": "industrial fire",
+    "address": "108 dogwood dr.",
+    "casualties": "unknown number trapped",
+    "timestamp": "2025-04-01T22:05:15.488418",
+    "transcript": "Speaker 2: There's a industrial fire at 108 DOGWOOD DR. Casualties reported: unknown number trapped"
+  },
+  {
+    "incident_type": "false alarm",
+    "address": "94 lantern chase dr.",
+    "casualties": "elderly person trapped",
+    "timestamp": "2025-04-01T22:05:18.833249",
+    "transcript": "Speaker 2: There's a false alarm at 94 LANTERN CHASE DR. Casualties reported: elderly person trapped"
+  },
+  {
+    "incident_type": "kitchen fire",
+    "address": "123 maple drive. the st",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T22:05:23.575231",
+    "transcript": "Speaker 2: There's a fire in my kitchen at 123 Maple Drive. The stove caught fire."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "Unknown address",
+    "casualties": "pets inside",
+    "timestamp": "2025-04-01T22:05:25.982115",
+    "transcript": "Speaker 2: My wife is still inside, she's trapped in the upstairs bedroom."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "Unknown address",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T22:05:28.951176",
+    "transcript": "Speaker 2: There are flames coming from the stove and spreading to the cabinets."
+  },
+  {
+    "incident_type": "industrial fire",
+    "address": "Unknown address",
+    "casualties": "none",
+    "timestamp": "2025-04-01T22:05:32.334006",
+    "transcript": "Speaker 2: The fire is getting worse! Please hurry!"
+  }
+]

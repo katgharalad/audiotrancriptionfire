@@ -1,0 +1,58 @@
+[
+  {
+    "incident_type": "kitchen fire",
+    "address": "123 main street.",
+    "casualties": "none",
+    "timestamp": "2025-04-01T22:11:57.816962",
+    "transcript": "Speaker 2: There's a kitchen fire at 123 Main Street. No one is hurt."
+  },
+  {
+    "incident_type": "structure fire",
+    "address": "456 elm road. my wife is trapped upst",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T22:11:57.818501",
+    "transcript": "Speaker 2: Structure fire at 456 Elm Road. My wife is trapped upstairs."
+  },
+  {
+    "incident_type": "gas leak",
+    "address": "789 oak avenue.",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T22:11:57.819623",
+    "transcript": "Speaker 2: Gas leak at 789 Oak Avenue. The whole family evacuated."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "101 pine street.",
+    "casualties": "caller trapped",
+    "timestamp": "2025-04-01T22:11:57.820758",
+    "transcript": "Speaker 2: I'm not sure what's happening but there's smoke everywhere at 101 Pine Street."
+  },
+  {
+    "incident_type": "electrical fire",
+    "address": "202 maple drive is on fire and there might be peopl",
+    "casualties": "pets inside",
+    "timestamp": "2025-04-01T22:11:57.821837",
+    "transcript": "Speaker 2: The building at 202 Maple Drive is on fire and there might be people inside."
+  },
+  {
+    "incident_type": "kitchen fire",
+    "address": "303 cherry lane. it started in the kitchen but spread to the living room. my dog is st",
+    "casualties": "pets inside",
+    "timestamp": "2025-04-01T22:11:57.823030",
+    "transcript": "Speaker 2: There's a fire at 303 Cherry Lane. It started in the kitchen but spread to the living room. My dog is still inside."
+  },
+  {
+    "incident_type": "electrical fire",
+    "address": "505 washington blvd apt 3c. childr",
+    "casualties": "children trapped",
+    "timestamp": "2025-04-01T22:11:57.824130",
+    "transcript": "Speaker 2: Fire at 505 Washington Blvd apt 3C. Children trapped."
+  },
+  {
+    "incident_type": "electrical fire",
+    "address": "606 jefferson st.",
+    "casualties": "none",
+    "timestamp": "2025-04-01T22:11:57.825264",
+    "transcript": "Speaker 2: Car on fire at 606 Jefferson St. No injuries."
+  }
+]

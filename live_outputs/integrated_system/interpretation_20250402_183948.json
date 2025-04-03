@@ -1,0 +1,14 @@
+{
+  "incident_type": "structure fire",
+  "casualties": "none",
+  "priority": 3.5,
+  "priority_level": "HIGH",
+  "reverse_geocoded_address": "162",
+  "landmark": null,
+  "address_confidence": 1.0,
+  "matched_zip": "06087",
+  "jurisdiction": null,
+  "needs_verification": false,
+  "timestamp": "2025-04-02T18:39:48.757569",
+  "transcript": "Speaker 2: There's a car accident at 162 Muirwood Village Drive. Two vehicles, looks like people are trapped inside."
+}

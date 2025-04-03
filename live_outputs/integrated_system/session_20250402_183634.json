@@ -1,0 +1,16 @@
+[
+  {
+    "incident_type": "structure fire",
+    "casualties": "none",
+    "priority": 3.5,
+    "priority_level": "HIGH",
+    "reverse_geocoded_address": "61",
+    "landmark": null,
+    "address_confidence": 1.0,
+    "matched_zip": "08304",
+    "jurisdiction": null,
+    "needs_verification": false,
+    "timestamp": "2025-04-02T18:36:34.074845",
+    "transcript": "Speaker 2: im standing on 61 S sandusky street oustide owu building and there is smoke and flames. there are atleast 5 adults and 2 children trapoped"
+  }
+]

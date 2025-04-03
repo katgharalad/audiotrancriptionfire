@@ -1,0 +1,16 @@
+[
+  {
+    "incident_type": "structure fire",
+    "casualties": "none",
+    "priority": 3.5,
+    "priority_level": "HIGH",
+    "reverse_geocoded_address": "162 MUIRWOOD VILLAGE DR",
+    "landmark": "Muirwood Village Drive",
+    "address_confidence": 0.7979999999999999,
+    "matched_zip": "43015",
+    "jurisdiction": "Delaware",
+    "needs_verification": false,
+    "timestamp": "2025-04-02T18:50:15.111886",
+    "transcript": "Speaker 2: There's a car accident at 162 Muirwood Village Drive. Two vehicles, looks like people are trapped inside."
+  }
+]

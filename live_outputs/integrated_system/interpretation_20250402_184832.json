@@ -1,0 +1,14 @@
+{
+  "incident_type": "structure fire",
+  "casualties": "none",
+  "priority": 3.5,
+  "priority_level": "HIGH",
+  "reverse_geocoded_address": "Unknown address",
+  "landmark": null,
+  "address_confidence": 0.0,
+  "matched_zip": null,
+  "jurisdiction": null,
+  "needs_verification": true,
+  "timestamp": "2025-04-02T18:48:32.021867",
+  "transcript": "Speaker 2: im standing outside 64 w winter street and theres smoke and flames coming out of the house. i   and i can smell a gas leak. 3 adults are trapped inside"
+}

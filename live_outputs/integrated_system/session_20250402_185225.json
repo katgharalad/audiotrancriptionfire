@@ -1,0 +1,16 @@
+[
+  {
+    "incident_type": "structure fire",
+    "casualties": "none",
+    "priority": 3.5,
+    "priority_level": "HIGH",
+    "reverse_geocoded_address": "242   RD",
+    "landmark": null,
+    "address_confidence": 0.9,
+    "matched_zip": "43015",
+    "jurisdiction": null,
+    "needs_verification": true,
+    "timestamp": "2025-04-02T18:52:25.068525",
+    "transcript": "Speaker 2: I'm outside 242 Spring Street. The house is on fire and I think someone is still inside!"
+  }
+]

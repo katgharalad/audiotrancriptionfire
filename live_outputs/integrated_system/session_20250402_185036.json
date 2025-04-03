@@ -1,0 +1,16 @@
+[
+  {
+    "incident_type": "structure fire",
+    "casualties": "none",
+    "priority": 3.5,
+    "priority_level": "HIGH",
+    "reverse_geocoded_address": "7761 LIBERTY RD",
+    "landmark": "Liberty Township Fire Station",
+    "address_confidence": 0.765,
+    "matched_zip": "43015",
+    "jurisdiction": "Liberty Township",
+    "needs_verification": true,
+    "timestamp": "2025-04-02T18:50:36.613305",
+    "transcript": "Speaker 2: Fire behind Liberty Township Fire Station, it's spreading fast!"
+  }
+]

@@ -1,0 +1,263 @@
+Loading datasets...
+Loaded address_points dataset: 114302 records
+Loaded street_centerlines dataset: 14430 records
+Loaded msag dataset: 82 records
+Loaded parcels dataset: 99122 records
+Loaded zip_codes dataset: 62 records
+TESTING MULTIPLE EMERGENCY CALL TRANSCRIPTS
+===========================================
+
+Test Case #1: "There is a fire at 162 MUIRWOOD VILLAGE DR."
+------------------------------------------------------------
+Parsed information:
+  Extracted addresses: ['162 MUIRWOOD VILLAGE DR']
+  No landmarks found
+
+Validation results:
+  Address validity: True
+  Confidence score: 1.0
+  Matched address: 162
+  Matched landmark: None
+  Needs verification: False
+  Zip code: 6087
+  Jurisdiction: None
+  Processing time: 55.5 ms
+======================================================================
+
+Test Case #2: "I'm outside Muirwood Village Apts and it's burning."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Muirwood Village Apts']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 78.86 ms
+======================================================================
+
+Test Case #3: "Smoke coming from the building near Muirwood Village Apts on MUIRWOOD VILLAGE DR."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Muirwood Village Apts']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 80.81 ms
+======================================================================
+
+Test Case #4: "I'm across the street from Muirwood Village Apts, something exploded."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Muirwood Village Apts']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 78.86 ms
+======================================================================
+
+Test Case #5: "I'm at the Muirwood Village Apts in DELAWARE, help!"
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Muirwood Village Apts']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 78.65 ms
+======================================================================
+
+Test Case #6: "Massive fire behind Muirwood Village Apts on MUIRWOOD VILLAGE DR."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Muirwood Village Apts']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 77.46 ms
+======================================================================
+
+Test Case #7: "There's something burning at 1000 Sunbury Rd."
+------------------------------------------------------------
+Parsed information:
+  Extracted addresses: ['1000 Sunbury Rd']
+  Potential landmarks: ['Sunbury Rd']
+
+Validation results:
+  Address validity: True
+  Confidence score: 1.0
+  Matched address: 1000
+  Matched landmark: None
+  Needs verification: False
+  Zip code: 9600
+  Jurisdiction: None
+  Processing time: 40.82 ms
+======================================================================
+
+Test Case #8: "Outside the Delaware City Police Department — send help."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Delaware City Police Department']
+
+Validation results:
+  Address validity: True
+  Confidence score: 0.9
+  Matched address: 1 S SANDUSKY ST
+  Matched landmark: Delaware City Police Department
+  Needs verification: False
+  Zip code: 2315
+  Jurisdiction: None
+  Processing time: 62.56 ms
+======================================================================
+
+Test Case #9: "Fire in the woods by the Stratford Ecological Center."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Stratford Ecological Center']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 77.62 ms
+======================================================================
+
+Test Case #10: "Explosion near the Kroger parking lot on North Houk Rd."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['North Houk Rd']
+
+Validation results:
+  Address validity: True
+  Confidence score: 0.72
+  Matched address: 4715 NORTH SHORE DR
+  Matched landmark: North Houk Rd
+  Needs verification: True
+  Zip code: 9410
+  Jurisdiction: None
+  Processing time: 48.12 ms
+======================================================================
+
+Test Case #11: "Caller reports flames behind Liberty Township Fire Station."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Liberty Township Fire Station']
+
+Validation results:
+  Address validity: True
+  Confidence score: 1.0
+  Matched address: 3883 ST RT 605 S
+  Matched landmark: Liberty Township Fire Station
+  Needs verification: False
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 69.57 ms
+======================================================================
+
+Test Case #12: "Kids trapped at Camp Lazarus. Structure fire."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Camp Lazarus']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 77.72 ms
+======================================================================
+
+Test Case #13: "Smoke at Glenross Golf Clubhouse."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Glenross Golf Clubhouse']
+
+Validation results:
+  Address validity: True
+  Confidence score: 0.8
+  Matched address: 3001 HACKBERRY RD
+  Matched landmark: Glenross Golf Clubhouse
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 45.51 ms
+======================================================================
+
+Test Case #14: "Fire near Hayes High School football stadium!"
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Hayes High School']
+
+Validation results:
+  Address validity: False
+  Confidence score: 0.0
+  Matched address: None
+  Matched landmark: None
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 77.74 ms
+======================================================================
+
+Test Case #15: "Smoke coming from behind the Delaware County EMS Post."
+------------------------------------------------------------
+Parsed information:
+  No direct address found
+  Potential landmarks: ['Delaware County']
+
+Validation results:
+  Address validity: True
+  Confidence score: 0.7
+  Matched address: 9711 WASHINGTON BLVD
+  Matched landmark: Delaware County
+  Needs verification: True
+  Zip code: None
+  Jurisdiction: None
+  Processing time: 44.94 ms
+======================================================================

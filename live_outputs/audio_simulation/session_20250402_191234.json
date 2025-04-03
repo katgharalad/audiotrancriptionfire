@@ -1,0 +1,16 @@
+[
+  {
+    "incident_type": "structure fire",
+    "casualties": "none",
+    "priority": 3.5,
+    "priority_level": "HIGH",
+    "reverse_geocoded_address": "123   RD",
+    "landmark": null,
+    "address_confidence": 1.0,
+    "matched_zip": "43015",
+    "jurisdiction": null,
+    "needs_verification": false,
+    "timestamp": "2025-04-02T19:12:34.308191",
+    "transcript": "Speaker 2: We've got a fire at 123 Main Street, Delaware! There's a building on fire, it's a two-story commercial building. I see at least two people trapped on the second floor waving from windows. Smoke is coming out heavily from the roof area. Please hurry, the flames are getting bigger!"
+  }
+]

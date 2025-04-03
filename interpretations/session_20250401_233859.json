@@ -1,0 +1,26 @@
+[
+  {
+    "incident_type": "wildfire",
+    "address": "unknown address",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.18,
+    "casualties_confidence": 0.21,
+    "confidence": 0.2,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 5.0,
+    "priority_level": "MEDIUM",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T23:39:03.948196",
+    "transcript": "Speaker 2: "
+  }
+]

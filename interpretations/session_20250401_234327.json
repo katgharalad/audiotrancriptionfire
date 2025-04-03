@@ -1,0 +1,122 @@
+[
+  {
+    "incident_type": "gas leak",
+    "address": "355 oak street",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 1.0,
+    "casualties_confidence": 0.23,
+    "confidence": 0.61,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 4.8,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T23:43:27.983106",
+    "transcript": "Speaker 2: There's a gas leak at 355 Oak Street, I can smell gas coming from my neighbor's house."
+  },
+  {
+    "incident_type": "electrical fire",
+    "address": "123 maple drive",
+    "casualties": "none",
+    "incident_type_confidence": 0.17,
+    "casualties_confidence": 0.28,
+    "confidence": 0.23,
+    "address_validation": {
+      "valid": true,
+      "confidence": 0.7333333333333333,
+      "needs_verification": false
+    },
+    "priority": 3.5,
+    "priority_level": "URGENT",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T23:43:27.984693",
+    "transcript": "Speaker 2: Help! My apartment building is on fire at 123 Maple Drive, people are trapped on the second floor."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "unknown address",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.88,
+    "casualties_confidence": 0.21,
+    "confidence": 0.55,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 5.0,
+    "priority_level": "MEDIUM",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T23:43:27.986069",
+    "transcript": "Speaker 2: I need to report smoke coming from the forest behind Troy Road, I think it's a wildfire."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "745 pine avenue",
+    "casualties": "none",
+    "incident_type_confidence": 0.18,
+    "casualties_confidence": 0.57,
+    "confidence": 0.38,
+    "address_validation": {
+      "valid": true,
+      "confidence": 0.7333333333333333,
+      "needs_verification": false
+    },
+    "priority": 4.5,
+    "priority_level": "CRITICAL",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": false
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T23:43:27.987787",
+    "transcript": "Speaker 2: My child is stuck in our car at 745 Pine Avenue, the doors are locked and the engine is running."
+  },
+  {
+    "incident_type": "wildfire",
+    "address": "unknown address",
+    "casualties": "caller trapped",
+    "incident_type_confidence": 0.19,
+    "casualties_confidence": 0.23,
+    "confidence": 0.21,
+    "address_validation": {
+      "valid": false,
+      "confidence": 0.0,
+      "needs_verification": true
+    },
+    "priority": 5.0,
+    "priority_level": "MEDIUM",
+    "casualties_structured": {
+      "children": false,
+      "elderly": false,
+      "pets": false,
+      "caller": true
+    },
+    "needs_verification": true,
+    "timestamp": "2025-04-01T23:43:27.989965",
+    "transcript": "Speaker 2: There's been an explosion at the factory on Washington Boulevard, I can see flames and smoke."
+  }
+]

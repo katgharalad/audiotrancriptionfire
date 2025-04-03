@@ -117,9 +117,16 @@ transcript_*.txt
 # *.pkl
 # delaware_fire_incidents_full.csv
 
-# Output directories
-demo_outputs/
-test_outputs/
-plots/
-reports/
-interpretations/ 
+# Specific temporary audio files to ignore
+audio/temp_*.wav
+audio/recording_*.wav
+
+# Log files from debugging
+debug_logs/
+*.stacktrace
+
+# Large or sensitive data files
+*large_dataset*.csv
+*credentials*.json
+*password*.txt
+*secret*.ini 

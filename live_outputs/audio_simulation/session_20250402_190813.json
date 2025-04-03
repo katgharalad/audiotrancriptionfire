@@ -1,0 +1,16 @@
+[
+  {
+    "incident_type": "structure fire",
+    "casualties": "none",
+    "priority": 3.5,
+    "priority_level": "HIGH",
+    "reverse_geocoded_address": "3 EASTON OVAL",
+    "landmark": "Central Ave",
+    "address_confidence": 0.5616000000000001,
+    "matched_zip": null,
+    "jurisdiction": null,
+    "needs_verification": true,
+    "timestamp": "2025-04-02T19:08:13.793907",
+    "transcript": "Speaker 2: Uh yeah hi, there\u2019s \u2014 oh my god, I\u2019m right outside Smith Elementary School, there\u2019s fire, there\u2019s smoke coming from the back \u2014 I think it\u2019s near the cafeteria or the gym \u2014 kids are running out, some are stuck! Please hurry, it\u2019s on 450 North Liberty Street, right off Central Ave!"
+  }
+]

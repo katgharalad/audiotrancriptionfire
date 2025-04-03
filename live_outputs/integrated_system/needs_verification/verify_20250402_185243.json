@@ -1,0 +1,14 @@
+{
+  "incident_type": "structure fire",
+  "casualties": "none",
+  "priority": 3.5,
+  "priority_level": "HIGH",
+  "reverse_geocoded_address": "Unknown address",
+  "landmark": null,
+  "address_confidence": 0.0,
+  "matched_zip": null,
+  "jurisdiction": null,
+  "needs_verification": true,
+  "timestamp": "2025-04-02T18:52:43.539122",
+  "transcript": "Speaker 2: Gas smell at 64 W Winter Street apartment building. Everyone is evacuating."
+}

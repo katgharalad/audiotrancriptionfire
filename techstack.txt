@@ -1,0 +1,148 @@
+🔧 Core Libraries & Their Roles in AudioTranscripY
+
+🎙️ Speech Transcription Layer
+
+openai-whisper
+Purpose: Real-time transcription of emergency calls.
+
+
+Usage: Converts microphone audio or audio files into clean text.
+
+
+How it works: Loads the tiny Whisper model → segments audio → outputs plain text with optional timestamps.
+
+
+Fallback: If Whisper CLI isn’t available, it uses Python API mode.
+
+
+“I’m at the Kroger on Houk Road…” becomes
+ "Speaker 2: I'm at the Kroger on North Houk Road, there's been an explosion…”
+
+🎭 Speaker Identification
+
+sklearn.cluster.KMeans
+Purpose: Clusters voice embeddings to auto-label speakers (e.g., Speaker 1, Speaker 2).
+
+
+How it works: You extract audio embeddings → use KMeans to classify similar ones as the same speaker.
+
+
+“This lets us separate the dispatcher from the caller in multi-speaker logs.”
+
+🧠 Emergency Interpretation (ML Layer)
+
+re (regex), scikit-learn, custom rules
+Purpose: Classify incidents (structure fire, car crash, medical, etc.) from transcript text.
+
+
+How it works: Pattern-matching phrases like flames, crash, gas leak → mapped to incident types + severity.
+
+
+Also detects: Priority (high/low), number of people affected, and flags like “needs verification”.
+
+
+
+🗺️ Address Validation Engine
+
+pandas
+Purpose: Loads, queries, and processes Delaware County GIS datasets.
+
+
+How it works: Loads CSVs for:
+
+
+Address Points → for direct matches
+
+
+Street Centerlines → to validate street names
+
+
+Parcels, Zip Codes, MSAG → for jurisdiction and boundary checks
+
+
+These datasets are how “Smith Elementary” becomes “450 North Liberty St, 43015”.
+
+fuzzywuzzy + Levenshtein
+Purpose: Handle vague, misspelled, or landmark-based inputs.
+
+
+How it works:
+
+
+Uses fuzz.partial_ratio or process.extractOne()
+
+
+Matches landmark mentions like "delaware fire station" → to "Liberty Township Fire Station"
+
+
+Then resolves to the corresponding known address.
+
+
+“I’m behind the fire station” doesn’t fail. It finds 7761 Liberty Rd.
+
+📫 Address Parsing & Enrichment
+
+usaddress (optional if added)
+Purpose: Splits raw address strings into components (number, street, city, etc.).
+
+
+Useful for: Cleaning raw text before fuzzy match or ZIP/jurisdiction lookup.
+
+
+
+🌐 System Utilities & Integration
+
+argparse
+Command-line interface to let you pick:
+
+
+Call simulation modes
+
+
+Audio input vs text input
+
+
+Output saving directories
+
+
+os, json, datetime, uuid
+For saving results like:
+
+
+dispatch_report_<timestamp>.json
+
+
+Logs of each run
+
+
+Timestamps for when each call happened
+
+
+
+🧪 Simulation, Testing, Datasets
+
+random, time, textwrap
+Used for generating randomized test inputs and delays for realistic CLI playback.
+
+
+wave, sounddevice, pyaudio (if used)
+For capturing live audio and saving .wav files before Whisper transcribes them.
+
+
+
+📁 Optional Enhancements You’re Laying the Ground For
+
+folium or geopandas (future)
+For mapping address matches visually on a Delaware County map
+
+
+streamlit or tkinter (future)
+For a dispatcher-friendly interface to verify + send reports
+
+
+
+💡 TL;DR – “How It Works” Recap
+
+We use Whisper for real-time speech → parse it for incidents and addresses → validate those locations using official GIS datasets → and output a structured dispatch report with confidence scores, zip, jurisdiction, and recommended resources.
+The system is modular — each of these libraries is powering a distinct step of the pipeline, and the glue is your architecture.
+

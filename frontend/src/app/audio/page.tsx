@@ -1,363 +1,396 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MainLayout } from '@/components/layout';
-import { Card, Button, Badge } from '@/components/ui';
-import { MdMic, MdKeyboardVoice, MdFileUpload, MdCheck, MdClose } from 'react-icons/md';
+import { Button, Card } from '@/components/ui';
+import { useAppContext } from '@/contexts/AppContext';
+import apiService from '@/services/api';
+
+type InputType = 'text' | 'recording' | 'file';
 
 export default function AudioPage() {
-  const [inputType, setInputType] = useState<'live' | 'simulation' | 'upload'>('simulation');
-  const [simulationText, setSimulationText] = useState('');
-  const [file, setFile] = useState<File | null>(null);
+  const { dispatch } = useAppContext();
+  const [inputType, setInputType] = useState<InputType>('text');
+  const [textInput, setTextInput] = useState('');
   const [isRecording, setIsRecording] = useState(false);
-  const [transcript, setTranscript] = useState('');
+  const [audioFile, setAudioFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [result, setResult] = useState<any>(null);
+  const [transcript, setTranscript] = useState('');
+  const [interpretation, setInterpretation] = useState<any | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleSimulate = async () => {
-    if (!simulationText) return;
-    
-    setIsProcessing(true);
-    
-    // In a real application, this would make an API call to the audio simulation endpoint
-    try {
-      // Simulate an API call with timeout
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setTranscript(simulationText);
-      setResult({
-        interpretation: {
-          incident_type: 'Structure Fire',
-          incident_type_confidence: 0.89,
-          address: '123 Main Street, Anytown, DE',
-          address_validation: {
-            address_validity: true,
-            matched_address: '123 Main St, Anytown, DE 19801',
-            confidence_score: 0.95
-          },
-          casualties: 'Two people trapped on second floor',
-          casualties_confidence: 0.78,
-          priority: 1,
-          priority_level: 'High'
-        },
-        success: true
-      });
-    } catch (error) {
-      console.error('Error simulating audio', error);
-    } finally {
-      setIsProcessing(false);
-    }
-  };
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setFile(e.target.files[0]);
-    }
-  };
-
-  const handleUpload = async () => {
-    if (!file) return;
-    
-    setIsProcessing(true);
-    
-    // In a real application, this would upload the file to the API
-    try {
-      // Simulate an API call with timeout
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setTranscript('Fire reported at 456 Oak Avenue. Caller states there is smoke coming from the kitchen. No injuries reported.');
-      setResult({
-        interpretation: {
-          incident_type: 'Kitchen Fire',
-          incident_type_confidence: 0.92,
-          address: '456 Oak Avenue, Anytown, DE',
-          address_validation: {
-            address_validity: true,
-            matched_address: '456 Oak Ave, Anytown, DE 19801',
-            confidence_score: 0.97
-          },
-          casualties: 'No injuries reported',
-          casualties_confidence: 0.95,
-          priority: 2,
-          priority_level: 'Medium'
-        },
-        success: true
-      });
-    } catch (error) {
-      console.error('Error uploading file', error);
-    } finally {
-      setIsProcessing(false);
-    }
-  };
-
-  const handleRecording = () => {
-    setIsRecording(!isRecording);
-    
-    if (!isRecording) {
-      // Start recording logic would go here
-      console.log('Started recording');
-    } else {
-      // Stop recording and process audio
-      console.log('Stopped recording');
-      setIsProcessing(true);
-      
-      // Simulate processing
-      setTimeout(() => {
-        setTranscript('Traffic accident at the intersection of Main Street and 5th Avenue. One car overturned. Possible injuries.');
-        setResult({
-          interpretation: {
-            incident_type: 'Traffic Accident',
-            incident_type_confidence: 0.85,
-            address: 'Intersection of Main St and 5th Ave, Anytown, DE',
-            address_validation: {
-              address_validity: false,
-              potential_matches: [
-                'Main St & 5th Ave, Anytown, DE 19801',
-                'Main St & 5th Avenue, Anytown, Delaware'
-              ],
-              confidence_score: 0.65,
-              needs_verification: true
-            },
-            casualties: 'Possible injuries reported',
-            casualties_confidence: 0.72,
-            priority: 2,
-            priority_level: 'Medium'
-          },
-          success: true
-        });
-        setIsProcessing(false);
-        setIsRecording(false);
-      }, 2000);
-    }
-  };
-
-  const clearResults = () => {
+  const handleInputTypeChange = (type: InputType) => {
+    setInputType(type);
     setTranscript('');
-    setResult(null);
+    setInterpretation(null);
+    setError(null);
+  };
+
+  const processTranscript = async (text: string) => {
+    try {
+      setIsProcessing(true);
+      setError(null);
+      
+      // Get interpretation from API
+      const result = await apiService.transcript.interpret(text);
+      
+      if (result?.data?.interpretation) {
+        setInterpretation(result.data.interpretation);
+        
+        // Create a new incident based on the interpretation
+        const newIncident = {
+          id: `incident-${Date.now()}`,
+          interpretation: result.data.interpretation,
+          timestamp: new Date().toISOString(),
+          status: 'pending' as const,
+        };
+        
+        // Add to global state
+        dispatch({ type: 'ADD_INCIDENT', payload: newIncident });
+        
+        return result.data.interpretation;
+      } else if (result?.error) {
+        setError(result.error.message || 'Error processing transcript');
+        return null;
+      }
+    } catch (err: any) {
+      setError(err.message || 'Failed to process transcript');
+      console.error('Error processing transcript:', err);
+      return null;
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const handleTextSubmit = async () => {
+    if (!textInput.trim()) {
+      setError('Please enter some text');
+      return;
+    }
+    
+    setTranscript(textInput);
+    await processTranscript(textInput);
+  };
+
+  const handleRecordingToggle = () => {
+    if (isRecording) {
+      // Stop recording
+      setIsRecording(false);
+      
+      // Simulate getting audio transcript (in a real app, this would use the Web Audio API)
+      setIsProcessing(true);
+      setTimeout(async () => {
+        const simulatedTranscript = "This is a simulated transcript from recorded audio.";
+        setTranscript(simulatedTranscript);
+        await processTranscript(simulatedTranscript);
+      }, 1500);
+    } else {
+      // Start recording
+      setIsRecording(true);
+      setTranscript('');
+      setInterpretation(null);
+    }
+  };
+
+  const handleFileSelect = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+    
+    const file = files[0];
+    setAudioFile(file);
+    
+    // Process the audio file
+    try {
+      setIsProcessing(true);
+      setError(null);
+      
+      // Get transcription from audio file
+      const result = await apiService.audio.processAudio(file);
+      
+      if (result?.data?.result?.transcript) {
+        const audioTranscript = result.data.result.transcript;
+        setTranscript(audioTranscript);
+        
+        // Now process this transcript for interpretation
+        await processTranscript(audioTranscript);
+      } else if (result?.error) {
+        setError(result.error.message || 'Error processing audio file');
+      }
+    } catch (err: any) {
+      setError(err.message || 'Failed to process audio file');
+      console.error('Error processing audio file:', err);
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const simulateAudio = async () => {
+    if (!textInput.trim()) {
+      setError('Please enter some text to simulate');
+      return;
+    }
+    
+    try {
+      setIsProcessing(true);
+      setError(null);
+      
+      // Use the simulation API
+      const result = await apiService.audio.simulateTranscript(textInput);
+      
+      if (result?.data?.result?.transcript) {
+        const simulatedTranscript = result.data.result.transcript;
+        setTranscript(simulatedTranscript);
+        
+        // Now process this transcript for interpretation
+        await processTranscript(simulatedTranscript);
+      } else if (result?.error) {
+        setError(result.error.message || 'Error simulating audio');
+      }
+    } catch (err: any) {
+      setError(err.message || 'Failed to simulate audio');
+      console.error('Error simulating audio:', err);
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   return (
     <MainLayout>
-      <div className="grid grid-cols-1 gap-8">
-        <section>
-          <div className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold text-gray-900">Audio Processing</h1>
-          </div>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-6">Audio Input</h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <Button 
+            variant={inputType === 'text' ? 'primary' : 'secondary'}
+            onClick={() => handleInputTypeChange('text')}
+            className="flex items-center justify-center"
+          >
+            <span className="mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8 3a1 1 0 11-2 0V7a1 1 0 112 0v6z" clipRule="evenodd" />
+              </svg>
+            </span>
+            Text Input
+          </Button>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Audio Input */}
-            <div>
-              <Card title="Audio Input" variant="elevated">
-                <div className="space-y-4">
-                  <div className="flex space-x-2">
-                    <Button 
-                      variant={inputType === 'live' ? 'primary' : 'secondary'} 
-                      onClick={() => setInputType('live')}
-                      leftIcon={<MdMic />}
-                    >
-                      Live Input
-                    </Button>
-                    <Button 
-                      variant={inputType === 'simulation' ? 'primary' : 'secondary'} 
-                      onClick={() => setInputType('simulation')}
-                      leftIcon={<MdKeyboardVoice />}
-                    >
-                      Simulation
-                    </Button>
-                    <Button 
-                      variant={inputType === 'upload' ? 'primary' : 'secondary'} 
-                      onClick={() => setInputType('upload')}
-                      leftIcon={<MdFileUpload />}
-                    >
-                      Upload
-                    </Button>
+          <Button 
+            variant={inputType === 'recording' ? 'primary' : 'secondary'}
+            onClick={() => handleInputTypeChange('recording')}
+            className="flex items-center justify-center"
+          >
+            <span className="mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
+              </svg>
+            </span>
+            Live Recording
+          </Button>
+          
+          <Button 
+            variant={inputType === 'file' ? 'primary' : 'secondary'}
+            onClick={() => handleInputTypeChange('file')}
+            className="flex items-center justify-center"
+          >
+            <span className="mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clipRule="evenodd" />
+              </svg>
+            </span>
+            Upload File
+          </Button>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Input Section */}
+          <Card title="Input" variant="elevated">
+            {inputType === 'text' && (
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Enter emergency call transcript</label>
+                  <textarea 
+                    className="w-full h-40 px-3 py-2 border rounded-md"
+                    placeholder="Enter the transcript text here..."
+                    value={textInput}
+                    onChange={(e) => setTextInput(e.target.value)}
+                  />
+                </div>
+                <div className="flex gap-3">
+                  <Button 
+                    variant="primary" 
+                    onClick={handleTextSubmit}
+                    disabled={isProcessing || !textInput.trim()}
+                    isLoading={inputType === 'text' && isProcessing}
+                  >
+                    Process Transcript
+                  </Button>
+                  <Button 
+                    variant="secondary" 
+                    onClick={simulateAudio}
+                    disabled={isProcessing || !textInput.trim()}
+                    isLoading={inputType === 'text' && isProcessing}
+                  >
+                    Simulate Audio
+                  </Button>
+                </div>
+              </div>
+            )}
+            
+            {inputType === 'recording' && (
+              <div className="space-y-4">
+                <div className="flex flex-col items-center justify-center h-48">
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center cursor-pointer ${isRecording ? 'bg-red-500 animate-pulse' : 'bg-blue-500'}`} onClick={handleRecordingToggle}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
+                    </svg>
                   </div>
+                  <p className="mt-4 text-center">
+                    {isRecording ? 'Recording... Click to stop' : 'Click to start recording'}
+                  </p>
+                </div>
+              </div>
+            )}
+            
+            {inputType === 'file' && (
+              <div className="space-y-4">
+                <div className="flex flex-col items-center justify-center h-48 border-2 border-dashed border-gray-300 rounded-md">
+                  <input 
+                    type="file" 
+                    ref={fileInputRef} 
+                    onChange={handleFileChange} 
+                    accept="audio/*" 
+                    className="hidden" 
+                  />
                   
-                  {/* Live Input */}
-                  {inputType === 'live' && (
-                    <div className="space-y-4">
-                      <p className="text-gray-600 text-sm">Record live audio to process an emergency call</p>
-                      <div className="flex justify-center">
-                        <Button
-                          variant={isRecording ? 'danger' : 'primary'}
-                          size="lg"
-                          onClick={handleRecording}
-                          className="rounded-full h-16 w-16 flex items-center justify-center"
-                        >
-                          <MdMic className="text-2xl" />
-                        </Button>
-                      </div>
-                      {isRecording && (
-                        <div className="text-center">
-                          <Badge variant="danger">Recording</Badge>
-                        </div>
-                      )}
-                    </div>
-                  )}
-                  
-                  {/* Simulation Input */}
-                  {inputType === 'simulation' && (
-                    <div className="space-y-4">
-                      <p className="text-gray-600 text-sm">Enter text to simulate an emergency call</p>
-                      <textarea
-                        className="w-full border border-gray-300 rounded-md px-3 py-2 min-h-[120px]"
-                        placeholder="Enter emergency call transcript simulation..."
-                        value={simulationText}
-                        onChange={(e) => setSimulationText(e.target.value)}
-                      />
-                      <Button 
-                        variant="primary" 
-                        onClick={handleSimulate}
-                        disabled={isProcessing || !simulationText}
-                        isLoading={isProcessing && inputType === 'simulation'}
+                  {audioFile ? (
+                    <div className="text-center">
+                      <p className="text-lg font-medium">{audioFile.name}</p>
+                      <p className="text-sm text-gray-500">
+                        {(audioFile.size / 1024 / 1024).toFixed(2)} MB
+                      </p>
+                      <Button
+                        variant="secondary"
+                        className="mt-4"
+                        onClick={handleFileSelect}
+                        disabled={isProcessing}
                       >
-                        Process Simulation
+                        Select Different File
                       </Button>
                     </div>
-                  )}
-                  
-                  {/* File Upload */}
-                  {inputType === 'upload' && (
-                    <div className="space-y-4">
-                      <p className="text-gray-600 text-sm">Upload an audio file of an emergency call</p>
-                      <div className="border-2 border-dashed border-gray-300 rounded-md p-6 text-center">
-                        <input
-                          type="file"
-                          accept="audio/*"
-                          className="hidden"
-                          id="audio-file"
-                          onChange={handleFileUpload}
-                        />
-                        <label htmlFor="audio-file" className="cursor-pointer">
-                          <div className="flex flex-col items-center">
-                            <MdFileUpload className="text-3xl text-gray-400" />
-                            <span className="mt-2 text-sm text-gray-500">
-                              {file ? file.name : 'Click to upload audio file'}
-                            </span>
-                          </div>
-                        </label>
-                      </div>
+                  ) : (
+                    <div className="text-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                      </svg>
+                      <p className="mt-2 text-sm text-gray-500">
+                        Click to upload or drag and drop
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        MP3, WAV, M4A up to 10MB
+                      </p>
                       <Button 
-                        variant="primary" 
-                        onClick={handleUpload}
-                        disabled={isProcessing || !file}
-                        isLoading={isProcessing && inputType === 'upload'}
+                        variant="secondary" 
+                        className="mt-4"
+                        onClick={handleFileSelect}
                       >
-                        Process Audio File
+                        Select File
                       </Button>
                     </div>
                   )}
                 </div>
-              </Card>
-            </div>
+              </div>
+            )}
             
-            {/* Results */}
-            <div>
-              <Card title="Processing Results" variant="elevated">
-                {transcript ? (
-                  <div className="space-y-4">
+            {error && (
+              <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-md border border-red-200">
+                {error}
+              </div>
+            )}
+          </Card>
+          
+          {/* Result Section */}
+          <Card title="Result" variant="elevated">
+            <div className="space-y-6">
+              {isProcessing ? (
+                <div className="flex justify-center items-center h-64">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+                </div>
+              ) : transcript ? (
+                <div>
+                  <h3 className="text-lg font-medium mb-2">Transcript</h3>
+                  <div className="p-3 bg-gray-50 rounded-md border border-gray-200 mb-4">
+                    <p className="whitespace-pre-wrap">{transcript}</p>
+                  </div>
+                  
+                  {interpretation && (
                     <div>
-                      <h3 className="font-medium text-gray-900 mb-2">Transcript</h3>
-                      <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                        <p className="text-gray-800">{transcript}</p>
+                      <h3 className="text-lg font-medium mb-2">Interpretation</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="text-sm font-medium text-gray-500 mb-1">Incident Type</h4>
+                          <p className="font-medium">{interpretation.incident_type}</p>
+                          <p className="text-xs text-gray-500">
+                            Confidence: {Math.round(interpretation.incident_type_confidence * 100)}%
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-sm font-medium text-gray-500 mb-1">Priority</h4>
+                          <p className="font-medium">{interpretation.priority_level}</p>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-sm font-medium text-gray-500 mb-1">Address</h4>
+                          <p className="font-medium">{interpretation.address}</p>
+                          <div className="mt-1">
+                            {interpretation.address_validation?.address_validity ? (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                                Valid Address
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
+                                Address Needs Verification
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-sm font-medium text-gray-500 mb-1">Casualties</h4>
+                          <p className="font-medium">{interpretation.casualties || 'None reported'}</p>
+                          <p className="text-xs text-gray-500">
+                            Confidence: {Math.round((interpretation.casualties_confidence || 0) * 100)}%
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4 text-right">
+                        <Button 
+                          variant="primary"
+                          onClick={() => window.location.href = '/incidents'}
+                        >
+                          View All Incidents
+                        </Button>
                       </div>
                     </div>
-                    
-                    {result && (
-                      <div className="space-y-4">
-                        <h3 className="font-medium text-gray-900 mb-2">Interpretation</h3>
-                        
-                        <div className="grid grid-cols-2 gap-3">
-                          <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
-                            <p className="text-sm text-gray-600">Incident Type</p>
-                            <p className="font-medium text-gray-800">{result.interpretation.incident_type}</p>
-                            <div className="mt-1 flex items-center">
-                              <div className="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                                <div 
-                                  className="h-full bg-blue-600 rounded-full"
-                                  style={{ width: `${Math.round(result.interpretation.incident_type_confidence * 100)}%` }}
-                                />
-                              </div>
-                              <span className="ml-2 text-xs text-gray-500">
-                                {Math.round(result.interpretation.incident_type_confidence * 100)}%
-                              </span>
-                            </div>
-                          </div>
-                          
-                          <div className="p-3 bg-green-50 rounded-lg border border-green-200">
-                            <p className="text-sm text-gray-600">Priority</p>
-                            <p className="font-medium text-gray-800">{result.interpretation.priority_level}</p>
-                            <div className="mt-1">
-                              {result.interpretation.priority === 1 && (
-                                <Badge variant="danger" withDot>High</Badge>
-                              )}
-                              {result.interpretation.priority === 2 && (
-                                <Badge variant="warning" withDot>Medium</Badge>
-                              )}
-                              {result.interpretation.priority === 3 && (
-                                <Badge variant="info" withDot>Low</Badge>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                          <p className="text-sm text-gray-600">Address</p>
-                          <p className="font-medium text-gray-800">{result.interpretation.address}</p>
-                          
-                          {result.interpretation.address_validation.address_validity ? (
-                            <div className="flex items-center mt-1 text-green-600 text-sm">
-                              <MdCheck className="mr-1" /> Valid
-                            </div>
-                          ) : (
-                            <div className="flex items-center mt-1 text-red-600 text-sm">
-                              <MdClose className="mr-1" /> Needs verification
-                            </div>
-                          )}
-                          
-                          {result.interpretation.address_validation.matched_address && (
-                            <p className="text-sm mt-1 text-gray-500">
-                              Matched: {result.interpretation.address_validation.matched_address}
-                            </p>
-                          )}
-                        </div>
-                        
-                        <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
-                          <p className="text-sm text-gray-600">Casualties</p>
-                          <p className="font-medium text-gray-800">{result.interpretation.casualties}</p>
-                          <div className="mt-1 flex items-center">
-                            <div className="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                              <div 
-                                className="h-full bg-blue-600 rounded-full"
-                                style={{ width: `${Math.round(result.interpretation.casualties_confidence * 100)}%` }}
-                              />
-                            </div>
-                            <span className="ml-2 text-xs text-gray-500">
-                              {Math.round(result.interpretation.casualties_confidence * 100)}%
-                            </span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex space-x-3 pt-4">
-                          <Button variant="primary" fullWidth>
-                            Send to Dispatch
-                          </Button>
-                          <Button variant="secondary" onClick={clearResults}>
-                            Clear
-                          </Button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <div className="py-10 text-center">
-                    <p className="text-gray-500">No results to display. Process audio to see interpretation.</p>
-                  </div>
-                )}
-              </Card>
+                  )}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center h-64 text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                  <p>Submit audio or text to see results</p>
+                </div>
+              )}
             </div>
-          </div>
-        </section>
+          </Card>
+        </div>
       </div>
     </MainLayout>
   );

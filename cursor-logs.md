@@ -24,8 +24,14 @@
 - [x] Create verification page
 - [x] Create audio input page
 - [x] Implement state management
-- [ ] Connect to backend API
-- [ ] Implement WebSocket for real-time updates
+- [x] Connect to backend API (in progress)
+  - [x] Audio page API integration
+  - [ ] Incidents page API integration
+  - [ ] Verification page API integration
+- [x] Implement WebSocket for real-time updates
+  - [x] Create WebSocket service and hook
+  - [x] Integrate with global state management
+  - [x] Add connection status indicator
 
 ## Logs
 
@@ -127,6 +133,50 @@ Implemented global state management with React Context API:
 
 The application now maintains a consistent state across all pages and provides a seamless user experience with real-time updates of incident information.
 
+### Log Entry #15 - April 23, 2023
+Started connecting the frontend to the backend API:
+
+1. **Audio Page Integration**:
+   - Refactored the Audio page to use real API services instead of mock data
+   - Implemented three methods of audio input:
+     - Direct text input using the transcript interpretation API
+     - Audio file upload using the audio processing API
+     - Simulated audio recording (with placeholder for WebRTC implementation)
+   
+2. **Global State Updates**:
+   - Connected the API response to the global state management
+   - Added new incidents to the global store after processing
+   - Implemented proper error handling and loading states
+   
+3. **User Flow Improvements**:
+   - Added clear navigation between input and results
+   - Improved feedback during API processing
+   - Added error messages for failed API calls
+
+This implementation provides a foundation for connecting all other pages to the backend API, establishing a complete end-to-end workflow from audio input to incident management.
+
+### Log Entry #16 - April 24, 2023
+Implemented WebSocket functionality for real-time updates:
+
+1. **WebSocket Architecture**:
+   - Created a flexible WebSocket service with two implementation options:
+     - React hook (`useWebSocket`) for component-based usage
+     - Singleton service for application-wide access
+   - Implemented reconnection logic with exponential backoff
+   - Added message type handling for various event types
+
+2. **State Integration**:
+   - Connected WebSocket events directly to the global state management
+   - Implemented handlers for incident creation, updates, and deletion
+   - Added support for dispatch updates and system messages
+
+3. **UI Enhancements**:
+   - Added WebSocket connection status indicator in the main layout
+   - Implemented visual feedback for connection state (connected, connecting, disconnected, error)
+   - Enhanced the MainLayout component with proper navigation links and dark mode support
+
+The WebSocket implementation enables real-time updates across the application, ensuring that all users have the latest incident information without requiring manual refreshes. This is particularly important for an emergency response system where timely information is critical.
+
 ## Task Updates
 - [x] Implement frontend UI components
 - [x] Create main layout with responsive design
@@ -136,5 +186,7 @@ The application now maintains a consistent state across all pages and provides a
 - [x] Implement audio page
 - [x] Implement SEO optimizations
 - [x] Implement global state management
-- [ ] Connect to backend API
-- [ ] Implement WebSocket for real-time updates 
+- [x] Connect Audio page to backend API
+- [ ] Connect Incidents page to backend API
+- [ ] Connect Verification page to backend API
+- [x] Implement WebSocket for real-time updates 
